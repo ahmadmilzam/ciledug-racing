@@ -1,7 +1,5 @@
 <?php
 
-// include_once '../system/vendor/autoload.php';
-
 if (!isset($_SERVER['REMOTE_ADDR'])) {
     $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
 }
@@ -29,6 +27,7 @@ date_default_timezone_set('Asia/Jakarta');
 $root = dirname(__FILE__);
 // var_dump($root); exit;
 switch ($root) {
+		//change your project path here
     case 'D:\server\htdocs\project_cldr\public_html':
     // case 'F:\Server\htdocs\ahmadmilzam\public_html':
         $enviroment = 'development';
@@ -210,8 +209,11 @@ if (defined('ENVIRONMENT'))
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
 
+<<<<<<< HEAD
 	// var_dump(BASEPATH); exit;
 
+=======
+>>>>>>> master
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
@@ -223,4 +225,8 @@ if (defined('ENVIRONMENT'))
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */
+<<<<<<< HEAD
 /* Location: ./index.php */
+=======
+/* Location: ./index.php */
+>>>>>>> master
