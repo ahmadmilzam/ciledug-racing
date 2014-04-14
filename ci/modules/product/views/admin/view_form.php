@@ -119,4 +119,4 @@
     </div>
   </div>
 </div>
-<script src="<?php echo base_url('assets/themes/admin/js/plugins/ckeditor/ckeditor.js'); ?>"></script>
+<script src="<?php echo base_url('assets/lib/ckeditor/ckeditor.js'); ?>"></script>

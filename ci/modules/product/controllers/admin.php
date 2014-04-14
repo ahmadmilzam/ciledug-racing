@@ -167,7 +167,7 @@ class Admin extends Admin_Controller {
         'id'          => 'ckeditor',
         'name'        => 'description',
         'placeholder' => 'Enter product description',
-        'value'       => $this->form_validation->set_value('description', $data['description']),
+        'value'       => $this->form_validation->set_value('excerpt', $data['description']),
         'required'    => 'required'
       );
       //[4]

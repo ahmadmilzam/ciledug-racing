@@ -184,8 +184,9 @@ class Media extends MY_Controller {
     $config['overwrite'] = FALSE;
     $this->load->library('upload');
 
-
-    $funcNum = $this->input->get('CKEditorFuncNum'); //$_GET['CKEditorFuncNum']
+    $ckeditor = $this->input->get('CKEditor');
+    $lang_code = $this->input->get('langCode');
+    $func_num = $this->input->get('CKEditorFuncNum'); //$_GET['CKEditorFuncNum']
     $this->upload->initialize($config);
 
     if (!$this->upload->do_upload('upload')){ // upload the file, 'upload' is the name of the field from CKEditor
@@ -204,6 +205,8 @@ class Media extends MY_Controller {
     }
     echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$upload_result', '$message');</script>";
   }
+
+
 
 }
 

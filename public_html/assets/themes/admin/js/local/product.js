@@ -1,7 +1,7 @@
 CKEDITOR.replace('ckeditor', {
-        'extraPlugins' : 'imagebrowser',
-        'imageBrowser_listUrl' : base_url+'media/get_files',
-        'filebrowserUploadUrl': base_url+'media/ckupload'
+        "extraPlugins" : "imagebrowser",
+        "imageBrowser_listUrl" : base_url+"media/get_files",
+        'filebrowserImageUploadUrl' : base_url+'editor/upload/',
     });
 $('.file-input').bootstrapFileInput();
 
