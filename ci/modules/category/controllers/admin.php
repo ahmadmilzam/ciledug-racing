@@ -37,6 +37,7 @@ class Admin extends Admin_Controller {
    */
   public function form($type = FALSE, $id = FALSE)
   {
+    // dump_exit($type);
     /**
      *if no type pass
      *redirect to admin dashboard with error
@@ -64,41 +65,6 @@ class Admin extends Admin_Controller {
       $array[$key] = $value;
     }
 
-    /**
-     * define input field for login form
-     * 1. category name (text)
-     * 2. category slug (textarea)
-     * 3. category parent (select dropdown)
-     */
-    //[1]
-    $data['input_name'] = array(
-      'class'       => 'form-control',
-      'name'        => 'name',
-      'type'        => 'text',
-      'placeholder' => 'Enter category name',
-      'value'       => $this->form_validation->set_value('name'),
-      'required'    => 'required'
-    );
-    //[2]
-    $data['input_slug'] = array(
-      'class'       => 'form-control',
-      'name'        => 'slug',
-      'type'        => 'text',
-      'placeholder' => 'Enter category slug',
-      'value'       => $this->form_validation->set_value('slug'),
-    );
-    //[3]
-    $data['input_dropdown_categories'] = $array;
-
-    //[4]
-    $data['submit_button'] = [
-      'class'   => 'btn btn-primary btn-lg',
-      'type'    => 'submit',
-      'name'    => 'submit',
-      'Value'   => 'Submit',
-      'content' => 'Submit'
-    ];
-
     //fetch category
     switch ($type) {
       case 'product':
@@ -106,12 +72,11 @@ class Admin extends Admin_Controller {
         $data['page_name'] = 'Product Category Form';
         break;
       case 'post':
-        $data['dropdown_categories'] = $this->post->dropdown('name');
-        $data['page_name'] = 'Post Category Form';
       default:
         # code...
         break;
     }
+    $data['page_name'] = ucfirst($type).' Category Form';
 
     $data['dropdown_categories'] = $this->$type->dropdown('name');
     //declare default variable
@@ -123,7 +88,7 @@ class Admin extends Admin_Controller {
     if($id)
     {
       //now fetch the product from db
-      $category = $this->category->get($id);
+      $category = $this->$type->limit(1)->get($id);
 
       //if result is empty
       if(!$category)
@@ -171,6 +136,41 @@ class Admin extends Admin_Controller {
         redirect('admin/category/index/'.$type);
       }
     }
+
+    /**
+     * define input field for login form
+     * 1. category name (text)
+     * 2. category slug (textarea)
+     * 3. category parent (select dropdown)
+     */
+    //[1]
+    $data['input_name'] = array(
+      'class'       => 'form-control',
+      'name'        => 'name',
+      'type'        => 'text',
+      'placeholder' => 'Enter category name',
+      'value'       => $this->form_validation->set_value('name', $data['name']),
+      'required'    => 'required'
+    );
+    //[2]
+    $data['input_slug'] = array(
+      'class'       => 'form-control',
+      'name'        => 'slug',
+      'type'        => 'text',
+      'placeholder' => 'Enter category slug',
+      'value'       => $this->form_validation->set_value('slug', $data['slug']),
+    );
+    //[3]
+    $data['input_dropdown_categories'] = $array;
+
+    //[4]
+    $data['submit_button'] = [
+      'class'   => 'btn btn-primary btn-lg',
+      'type'    => 'submit',
+      'name'    => 'submit',
+      'Value'   => 'Submit',
+      'content' => 'Submit'
+    ];
 
     //if there is no post or
     //form validation is return false

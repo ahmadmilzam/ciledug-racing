@@ -40,7 +40,7 @@
    * @param string $type  A string that use as mark category type, product or post.
    *
    */
-  function simple_tree_builder($items, $sub = '', $type = '')
+  function simple_tree_builder($items, $sub = '', $type='')
   {
     $output = '';
 
@@ -59,7 +59,7 @@
         {
           $sub2 = str_replace('<i class="fa fa-long-arrow-right"></i>', '&nbsp;', $sub);
           $sub2 .=  '&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-long-arrow-right"></i> &nbsp;';
-          $output .= simple_tree_builder($item['children'], $sub2);
+          $output .= simple_tree_builder($item['children'], $sub2, $type);
         }
       }
       $output .= '</ul>' . PHP_EOL;

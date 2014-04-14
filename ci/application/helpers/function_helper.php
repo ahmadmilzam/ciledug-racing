@@ -56,3 +56,12 @@ function url_slug($str, $separator = '-', $lowercase = FALSE)
 
     return trim($str, $separator);
 }
+
+/*
+ * helper function that try to get property of an object
+ * and return it
+ */
+function get_property($obj, $property)
+{
+    return isset($object->property) ? $object->property : '';
+}
