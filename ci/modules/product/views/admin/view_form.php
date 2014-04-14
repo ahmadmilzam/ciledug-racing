@@ -48,7 +48,12 @@
         <?php echo form_close(); ?><!-- form class row -->
       </div>
       <div class="tab-pane" id="image-tab">
-
+        <div class="row">
+          <div class="col-lg-12">
+            <?php echo form_upload($input_file); ?>
+            <?php echo form_button($upload_button); ?>
+          </div>
+        </div>
       </div>
     </div>
   </div>

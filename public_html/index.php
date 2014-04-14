@@ -208,12 +208,6 @@ if (defined('ENVIRONMENT'))
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
-
-<<<<<<< HEAD
-	// var_dump(BASEPATH); exit;
-
-=======
->>>>>>> master
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
@@ -225,8 +219,3 @@ if (defined('ENVIRONMENT'))
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */
-<<<<<<< HEAD
-/* Location: ./index.php */
-=======
-/* Location: ./index.php */
->>>>>>> master

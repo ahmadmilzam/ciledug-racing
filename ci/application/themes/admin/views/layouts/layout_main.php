@@ -62,7 +62,7 @@
     </div><!-- ./wrapper -->
 
       <!-- add new calendar event modal -->
-
+    <script>var base_url = '<?php echo base_url(); ?>';</script>
     <!-- load compiled script -->
     <?php $this->carabiner->display('main_js'); ?>
     <?php $this->carabiner->display('local_js'); ?>

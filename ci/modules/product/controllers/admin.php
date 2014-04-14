@@ -177,14 +177,34 @@ class Admin extends Admin_Controller {
       );
       //[7]
       $data['input_dropdown_categories'] = $array;
-      //[7]
-      $data['submit_button'] = [
+
+      //[8]
+      $data['input_file'] = array(
+        'type'    => 'file',
+        'class'   => 'file-input',
+        'id'      => 'file',
+        'name'    => 'file',
+        'title'   => 'Select for a file to upload',
+        'data-filename-placement' => 'inside'
+      );
+
+      //[9]
+      $data['submit_button'] = array(
         'class'   => 'btn btn-primary btn-lg',
         'type'    => 'submit',
         'name'    => 'submit',
         'Value'   => 'Submit',
         'content' => 'Submit'
-      ];
+      );
+
+      //[10]
+      $data['upload_button'] = array(
+        'class' => 'btn btn-info',
+        'type'=>'submit',
+        'name'=>'submit',
+        'content' => 'Upload',
+        'id'=>'js-upload-button'
+      );
 
       /**
        * define partials css and js only for Dashboard page
@@ -193,6 +213,7 @@ class Admin extends Admin_Controller {
        */
       //[1]
       $this->local_js = array(
+        array('plugins/bootstrap-file-input/bs-file-input.js'),
         array('local/product.js')
       );
 
