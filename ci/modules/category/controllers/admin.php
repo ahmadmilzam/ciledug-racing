@@ -18,18 +18,9 @@ class Admin extends Admin_Controller {
    */
   public function index($type = FALSE)
   {
-    switch ($type) {
-      case 'product':
-        # code...
-        $data['categories'] = $this->product->get_parent_child_tree();
-        $data['page_name'] = 'Product Category List';
-        break;
-      case 'post':
-        # code...
-        $data['categories'] = $this->post->get_parent_child_tree();
-        $data['page_name'] = 'Post Category List';
-        break;
-    }
+
+    $data['page_name'] = ucfirst($type) . ' Category List';
+    $data['categories'] = $this->$type->get_parent_child_tree();
     //append breadcrumb link
     $this->breadcrumb->append('Categories', 'admin/category/index');
 
@@ -46,9 +37,14 @@ class Admin extends Admin_Controller {
    */
   public function form($type = FALSE, $id = FALSE)
   {
-
-    //if no type pass
-    //redirect to admin dashboard with error
+    /**
+     *if no type pass
+     *redirect to admin dashboard with error
+     *
+     *current registered type:
+     *1. product
+     *2. post
+     */
     if(!$type)
     {
       $this->session->set_flashdata('error', 'An Error Occured');
@@ -61,18 +57,8 @@ class Admin extends Admin_Controller {
      * with first key is default value or parent category
      * @var array
      */
+    $categories = $this->$type->dropdown('name');
     $array = array( 0 => 'Root Category' );
-    switch ($type) {
-      case 'product':
-        # code...
-        $categories = $this->product->dropdown('name');
-        break;
-      case 'post':
-        $categories = $this->post->dropdown('name');
-      default:
-        # code...
-        break;
-    }
 
     foreach ($categories as $key => $value) {
       $array[$key] = $value;
@@ -117,7 +103,6 @@ class Admin extends Admin_Controller {
     switch ($type) {
       case 'product':
         # code...
-        $data['dropdown_categories'] = $this->category->dropdown('name');
         $data['page_name'] = 'Product Category Form';
         break;
       case 'post':
@@ -128,6 +113,7 @@ class Admin extends Admin_Controller {
         break;
     }
 
+    $data['dropdown_categories'] = $this->$type->dropdown('name');
     //declare default variable
     $data['id_category'] = '';
     $data['id_parent']   = 0;
@@ -172,17 +158,17 @@ class Admin extends Admin_Controller {
       );
       if($id)
       {
-        $category_id = $this->category->update($id, $save);
+        $category_id = $this->$type->update($id, $save);
       }
       else
       {
-        $category_id = $this->category->insert($save);
+        $category_id = $this->$type->insert($save);
       }
 
       if($category_id)
       {
-        $this->session->set_flashdata('success', $type . ' Has been saved successfully');
-        redirect('admin/category');
+        $this->session->set_flashdata('success', ucfirst($type) . ' Has been saved successfully');
+        redirect('admin/category/index/'.$type);
       }
     }
 
