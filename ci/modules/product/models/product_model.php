@@ -34,10 +34,10 @@ class Product_model extends MY_Model {
              'rules' => '' ),
       array( 'field' => 'img_primary',/*[3]*/
              'label' => 'Primary',
-             'rules' => '' ),
+             'rules' => 'callback_check_img' ),
       array( 'field' => 'category_id',
              'label' => 'Product Category',
-             'rules' => 'callback_check_category' ),
+             'rules' => 'trim' ),
       array( 'field' => 'name',
              'label' => 'Product Name',
              'rules' => 'trim|required|max_length[50]' ),
@@ -59,29 +59,13 @@ class Product_model extends MY_Model {
     );
   }
 
-  private function check_img()/*callback function for check any uploaded img for product*/
+  function check_img()/*callback function for check any uploaded img for product*/
   {
     $img = $this->input->post('images');
     //if img empty, warn user for upload
     if(empty($img) || $img =='')
     {
       $this->form_validation->set_message('check_img', 'Image product is required, please upload some');
-      return false;
-    }
-    else
-    {
-      return true;
-    }
-  }
-
-  private function check_category()/*callback function for check any uploaded img for product*/
-  {
-    $cat = $this->input->post('category_id');
-
-    //if img empty, warn user for select category
-    if(empty($cat) || $cat == 0)
-    {
-      $this->form_validation->set_message('check_category', 'Please select category for this product');
       return false;
     }
     else

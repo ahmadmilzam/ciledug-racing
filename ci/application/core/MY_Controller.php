@@ -70,8 +70,8 @@ class Admin_Controller extends MY_Controller {
     $this->main_css = array(
       array('bootstrap.css'),
       array('bootstrap.css.map'),
-      array('plugin/font-awesome.css'),
-      array('plugin/ionicons.css'),
+      array('plugins/font-awesome.css'),
+      array('plugins/ionicons.css'),
       array('admin.css')
     );
     //[2]

@@ -49,11 +49,72 @@
       </div>
       <div class="tab-pane" id="image-tab">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 ajaxfileupload-form">
             <?php echo form_upload($input_file); ?>
             <?php echo form_button($upload_button); ?>
           </div>
         </div>
+
+        <!-- per product -->
+        <div class="row product-row">
+
+          <div class="col-lg-2 col-md-3 col-xs-12">
+            <a href="#" class="thumbnail">
+              <img src="<?php echo base_url('media/avatars/default.png'); ?>" alt="">
+            </a>
+          </div>
+
+          <div class="col-lg-10 col-md-9 col-xs-12">
+            <div class="form-group">
+              <label>Alt Tag:</label>
+              <input type="text" class="form-control" placeholder="Alt tag">
+            </div>
+            <div class="form-group">
+              <label>Caption:</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="col-xs-12 text-right">
+            <label class="radio-inline">
+              <input type="radio" name="main"> Main Image
+            </label>
+            <a href="#" class="btn btn-danger js-delete-img margin-left"><i class="fa fa-trash-o"></i> Delete</a>
+          </div>
+
+        </div>
+        <!-- per product -->
+
+        <!-- per product -->
+        <div class="row product-row">
+
+          <div class="col-lg-2 col-md-3 col-xs-12">
+            <a href="#" class="thumbnail">
+              <img src="<?php echo base_url('media/avatars/default.png'); ?>" alt="">
+            </a>
+          </div>
+
+          <div class="col-lg-10 col-md-9 col-xs-12">
+            <div class="form-group">
+              <label>Alt Tag:</label>
+              <input type="text" class="form-control" placeholder="Alt tag">
+            </div>
+            <div class="form-group">
+              <label>Caption:</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="col-xs-12 text-right">
+            <label class="radio-inline">
+              <input type="radio" name="main"> Main Image
+            </label>
+            <a href="#" class="btn btn-danger js-delete-img margin-left"><i class="fa fa-trash-o"></i> Delete</a>
+          </div>
+
+        </div>
+        <!-- per product -->
+
       </div>
     </div>
   </div>

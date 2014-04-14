@@ -141,6 +141,12 @@ img {
 .margin-bottom{
   margin-bottom: 20px;
 }
+.margin-left{
+  margin-left: 20px;
+}
+.margin-right{
+  margin-right: 20px;
+}
 /* Display inline */
 .inline {
   display: inline;
@@ -2705,7 +2711,7 @@ Component: timeline
     padding: 0;
     width: 20px;
     height: 20px;
-    background: url(../assets/themes/admin/css/plugin/iCheck/flat/flat.png) no-repeat;
+    background: url(../assets/themes/admin/css/plugins/iCheck/flat/flat.png) no-repeat;
     border: none;
     cursor: pointer;
 }
@@ -2745,7 +2751,7 @@ Component: timeline
        only screen and (min-device-pixel-ratio: 1.5) {
     .icheckbox_flat,
     .iradio_flat {
-        background-image: url(../assets/themes/admin/css/plugin/iCheck/flat/flat@2x.png);
+        background-image: url(../assets/themes/admin/css/plugins/iCheck/flat/flat@2x.png);
         -webkit-background-size: 176px 22px;
         background-size: 176px 22px;
     }
@@ -2822,4 +2828,19 @@ Custom simple hierarchy tree
 }
 .simple-tree li:hover .tree-link-action{
   opacity: 1;
+}
+
+.ajaxfileupload-form{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-row{
+  padding-top: 20px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ddd;
+}
+.product-row:last-child{
+  border-bottom: none;
 }

@@ -65,7 +65,7 @@ $autoload['libraries'] = array('database', 'template', 'curl', 'cache');
 | $autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('html', 'url', 'text', 'asset', 'debug', 'function');
+$autoload['helper'] = array('html', 'url', 'text', 'asset', 'debug', 'function', 'image', 'file');
 
 /*
 | -------------------------------------------------------------------
@@ -80,7 +80,7 @@ $autoload['helper'] = array('html', 'url', 'text', 'asset', 'debug', 'function')
 |
 */
 
-$autoload['config'] = array('asset', 'cms_config', 'cms_cache', 'template');
+$autoload['config'] = array('asset', 'cms_config', 'cms_cache', 'template', 'images');
 
 
 /*

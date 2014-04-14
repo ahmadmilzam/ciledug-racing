@@ -19877,3 +19877,1678 @@ DEBUG - 2014-04-14 17:33:22 --> File loaded: ../ci/application/themes/admin/view
 DEBUG - 2014-04-14 17:33:22 --> File loaded: ../ci/application/views/profiler_template.php
 DEBUG - 2014-04-14 17:33:22 --> Final output sent to browser
 DEBUG - 2014-04-14 17:33:22 --> Total execution time: 1.5041
+DEBUG - 2014-04-14 20:25:36 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:25:36 --> URI Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Router Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Output Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Security Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Input Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:25:36 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:25:36 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Template Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:25:36 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 20:25:36 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> Email Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 20:25:36 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 20:25:36 --> Session Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: string_helper
+ERROR - 2014-04-14 20:25:36 --> The session cookie data did not match what was expected. This could be a possible hacking attempt.
+DEBUG - 2014-04-14 20:25:36 --> Session routines successfully run
+DEBUG - 2014-04-14 20:25:36 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 20:25:36 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 20:25:36 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:25:36 --> URI Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Router Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Output Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Security Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Input Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:25:36 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:25:36 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Template Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:25:36 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 20:25:36 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:36 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 20:25:36 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> Email Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 20:25:36 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 20:25:36 --> Session Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 20:25:36 --> Session routines successfully run
+DEBUG - 2014-04-14 20:25:36 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 20:25:36 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:36 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 20:25:36 --> File loaded: ../ci/application/../modules/user/views/auth/view_login.php
+DEBUG - 2014-04-14 20:25:37 --> Carabiner: Cache file 139748165521331a1b8316af558729f641db7c8987.css was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 20:25:37 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 20:25:37 --> Carabiner: Cache file 13974816550a5eede3c4c0fe3bef0e72cd89c4414c.js was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 20:25:37 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_modal.php
+DEBUG - 2014-04-14 20:25:37 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 20:25:37 --> Final output sent to browser
+DEBUG - 2014-04-14 20:25:37 --> Total execution time: 0.2440
+DEBUG - 2014-04-14 20:25:43 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:25:43 --> URI Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Router Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Output Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Security Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Input Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:25:43 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:25:43 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:25:43 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:25:43 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:25:43 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Template Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:25:43 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 20:25:43 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 20:25:43 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 20:25:43 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:43 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 20:25:43 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 20:25:43 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:43 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 20:25:43 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:43 --> Email Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 20:25:43 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 20:25:43 --> Session Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 20:25:43 --> Session routines successfully run
+DEBUG - 2014-04-14 20:25:43 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 20:25:43 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 20:25:43 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:43 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:43 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 20:25:43 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 20:25:43 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2014-04-14 20:25:44 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:25:44 --> URI Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Router Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Output Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Security Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Input Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:25:44 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Language Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Config Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:25:44 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:25:44 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:25:44 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:25:44 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Template Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:25:44 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 20:25:44 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 20:25:44 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 20:25:44 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:44 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 20:25:44 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:44 --> Email Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 20:25:44 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 20:25:44 --> Session Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 20:25:44 --> Session routines successfully run
+DEBUG - 2014-04-14 20:25:44 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 20:25:44 --> Model Class Initialized
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:25:44 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/views/admin/view_index.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/themes/admin/views/partials/partial_header.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/themes/admin/views/partials/partial_sidebar_offcanvas.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 20:25:44 --> Carabiner: Cache file 1397481655d4472daa7f669cabe501b0ad3ed99776.js was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 20:25:44 --> Carabiner: Cache file 139748165530fbe41c9dcb3d7f3a15ebc8413c993a.js was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_main.php
+DEBUG - 2014-04-14 20:25:44 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 20:25:44 --> Final output sent to browser
+DEBUG - 2014-04-14 20:25:44 --> Total execution time: 0.3760
+DEBUG - 2014-04-14 20:46:15 --> Config Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:46:15 --> URI Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Router Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Output Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Security Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Input Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:46:15 --> Language Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Language Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Config Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:46:15 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:46:15 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:46:15 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:46:15 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Template Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:46:15 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 20:46:15 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 20:46:15 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 20:46:15 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:46:15 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 20:46:15 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:46:15 --> Email Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 20:46:15 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 20:46:15 --> Session Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 20:46:15 --> Session routines successfully run
+DEBUG - 2014-04-14 20:46:15 --> Model Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 20:46:15 --> Model Class Initialized
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 20:46:15 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/views/admin/view_index.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/themes/admin/views/partials/partial_header.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/themes/admin/views/partials/partial_sidebar_offcanvas.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_main.php
+DEBUG - 2014-04-14 20:46:15 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 20:46:15 --> Final output sent to browser
+DEBUG - 2014-04-14 20:46:15 --> Total execution time: 0.2380
+DEBUG - 2014-04-14 20:53:25 --> Config Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:53:25 --> URI Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Router Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Output Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Security Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Input Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:53:25 --> Language Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Language Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Config Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:53:25 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:53:25 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:53:25 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:53:25 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:53:25 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 20:53:25 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Template Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:53:25 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Template Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:53:25 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:53:25 --> Image Lib Class Initialized
+ERROR - 2014-04-14 20:53:25 --> ErrorException [ 8 ]: Undefined property: CI::$image_lib ~ F:\Server\htdocs\ciledug-racing\ci\application\third_party\MX\Loader.php [ 171 ]
+DEBUG - 2014-04-14 20:53:25 --> Final output sent to browser
+DEBUG - 2014-04-14 20:53:25 --> Total execution time: 0.1550
+DEBUG - 2014-04-14 20:55:00 --> Config Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Hooks Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 20:55:00 --> URI Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Router Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Output Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Security Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Input Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 20:55:00 --> Language Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Language Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Config Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Loader Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 20:55:00 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 20:55:00 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 20:55:00 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 20:55:00 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 20:55:00 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> User Agent Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Template Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> cURL Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Cache Class Initialized.
+DEBUG - 2014-04-14 20:55:00 --> Controller Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 20:55:00 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 20:55:00 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 20:55:00 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:55:00 --> Carabiner: library configured.
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 20:55:00 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 20:55:00 --> Image Lib Class Initialized
+DEBUG - 2014-04-14 20:55:00 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 20:55:00 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 20:55:00 --> Final output sent to browser
+DEBUG - 2014-04-14 20:55:00 --> Total execution time: 0.1400
+DEBUG - 2014-04-14 21:07:57 --> Config Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Hooks Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 21:07:57 --> URI Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Router Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Output Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Security Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Input Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 21:07:57 --> Language Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Language Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Config Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Loader Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 21:07:57 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 21:07:57 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 21:07:57 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 21:07:57 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 21:07:57 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 21:07:57 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> User Agent Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Template Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> cURL Class Initialized
+DEBUG - 2014-04-14 21:07:57 --> Cache Class Initialized.
+DEBUG - 2014-04-14 21:07:57 --> Controller Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Config Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Hooks Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 21:08:08 --> URI Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Router Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Output Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Security Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Input Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 21:08:08 --> Language Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Language Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Config Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Loader Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 21:08:08 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 21:08:08 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 21:08:08 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 21:08:08 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 21:08:08 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> User Agent Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Template Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> cURL Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Cache Class Initialized.
+DEBUG - 2014-04-14 21:08:08 --> Controller Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 21:08:08 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 21:08:08 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 21:08:08 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:08:08 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:08:08 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 21:08:08 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 21:08:08 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 21:08:08 --> Image Lib Class Initialized
+ERROR - 2014-04-14 21:08:08 --> ErrorException [ 1 ]: Forbidden ~  [ 0 ]
+DEBUG - 2014-04-14 21:08:29 --> Config Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Hooks Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 21:08:29 --> URI Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Router Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Output Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Security Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Input Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 21:08:29 --> Language Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Language Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Config Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Loader Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 21:08:29 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 21:08:29 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 21:08:29 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 21:08:29 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 21:08:29 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> User Agent Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Template Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> cURL Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Cache Class Initialized.
+DEBUG - 2014-04-14 21:08:29 --> Controller Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 21:08:29 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 21:08:29 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 21:08:29 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:08:29 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:08:29 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 21:08:29 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 21:08:29 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 21:08:29 --> Image Lib Class Initialized
+ERROR - 2014-04-14 21:08:29 --> 404 Page Not Found --> 
+ERROR - 2014-04-14 21:08:29 --> ErrorException [ 1 ]: The page you requested was not found. ~  [ 0 ]
+DEBUG - 2014-04-14 21:08:40 --> Config Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Hooks Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 21:08:40 --> URI Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Router Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Output Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Security Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Input Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 21:08:40 --> Language Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Language Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Config Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Loader Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 21:08:40 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 21:08:40 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 21:08:40 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 21:08:40 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 21:08:40 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> User Agent Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Template Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> cURL Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Cache Class Initialized.
+DEBUG - 2014-04-14 21:08:40 --> Controller Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 21:08:40 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 21:08:40 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 21:08:40 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:08:40 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:08:40 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 21:08:40 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 21:08:40 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 21:08:40 --> Image Lib Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Config Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Hooks Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 21:12:28 --> URI Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Router Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Output Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Security Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Input Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 21:12:28 --> Language Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Language Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Config Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Loader Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 21:12:28 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 21:12:28 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 21:12:28 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 21:12:28 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 21:12:28 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> User Agent Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Template Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> cURL Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Cache Class Initialized.
+DEBUG - 2014-04-14 21:12:28 --> Controller Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 21:12:28 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 21:12:28 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 21:12:28 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:12:28 --> Carabiner: library configured.
+DEBUG - 2014-04-14 21:12:28 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 21:12:28 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 21:12:28 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 21:12:28 --> Image Lib Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Config Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:04:06 --> URI Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Router Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Output Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Security Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Input Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:04:06 --> Language Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Language Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Config Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:04:06 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:04:06 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:04:06 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:04:06 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:04:06 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:04:06 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Template Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:04:06 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:04:06 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Config Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:06:57 --> URI Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Router Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Output Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Security Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Input Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:06:57 --> Language Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Language Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Config Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:06:57 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:06:57 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:06:57 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:06:57 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:06:57 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:06:57 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Template Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:06:57 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:06:57 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Config Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:07:11 --> URI Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Router Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Output Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Security Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Input Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:07:11 --> Language Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Language Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Config Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:07:11 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:07:11 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:07:11 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:07:11 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:07:11 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Template Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:07:11 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:07:11 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:07:11 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:07:11 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:07:11 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:07:11 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:07:11 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:07:11 --> Language file loaded: language/english/profiler_lang.php
+ERROR - 2014-04-14 22:07:11 --> ErrorException [ 1 ]: Unable to load the requested file: media/view_index.php ~  [ 0 ]
+DEBUG - 2014-04-14 22:08:56 --> Config Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:08:56 --> URI Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Router Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Output Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Security Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Input Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:08:56 --> Language Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Language Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Config Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:08:56 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:08:56 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:08:56 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:08:56 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:08:56 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Template Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:08:56 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:08:56 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:08:56 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:08:56 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:08:56 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:08:56 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:08:56 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:08:56 --> Language file loaded: language/english/profiler_lang.php
+ERROR - 2014-04-14 22:08:56 --> ErrorException [ 1 ]: Unable to load the requested file: media/view_index.php ~  [ 0 ]
+DEBUG - 2014-04-14 22:09:08 --> Config Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:09:08 --> URI Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Router Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Output Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Security Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Input Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:09:08 --> Language Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Language Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Config Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:09:08 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:09:08 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:09:08 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:09:08 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:09:08 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Template Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:09:08 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:09:08 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:09:08 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:09:08 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:09:08 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:09:08 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:09:08 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:09:08 --> Language file loaded: language/english/profiler_lang.php
+ERROR - 2014-04-14 22:09:08 --> ErrorException [ 1 ]: Unable to load the requested file: media/view_index.php ~  [ 0 ]
+DEBUG - 2014-04-14 22:10:46 --> Config Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:10:46 --> URI Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Router Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Output Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Security Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Input Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:10:46 --> Language Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Language Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Config Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:10:46 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:10:46 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:10:46 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:10:46 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:10:46 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Template Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:10:46 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:10:46 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:10:46 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:10:46 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:10:46 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:10:46 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:10:46 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:10:46 --> File loaded: ../ci/application/../modules/media/views/view_index.php
+DEBUG - 2014-04-14 22:10:46 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:10:46 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:10:46 --> Final output sent to browser
+DEBUG - 2014-04-14 22:10:46 --> Total execution time: 0.1200
+DEBUG - 2014-04-14 22:10:50 --> Config Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Config Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:10:50 --> URI Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:10:50 --> Router Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> URI Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Router Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Output Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Output Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Security Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Security Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Input Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Input Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:10:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:10:50 --> Language Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Language Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Language Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Language Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Config Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Config Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:10:50 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:10:50 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:10:50 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Template Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:10:50 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Template Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:10:50 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:10:50 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:10:50 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:10:50 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:10:50 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:10:50 --> Language file loaded: language/english/profiler_lang.php
+ERROR - 2014-04-14 22:10:50 --> 404 Page Not Found --> page/assets
+ERROR - 2014-04-14 22:10:50 --> ErrorException [ 1 ]: The page you requested was not found. ~  [ 0 ]
+DEBUG - 2014-04-14 22:10:50 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:10:50 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:10:50 --> Upload Class Initialized
+DEBUG - 2014-04-14 22:10:50 --> Language file loaded: language/english/upload_lang.php
+ERROR - 2014-04-14 22:10:50 --> You did not select a file to upload.
+DEBUG - 2014-04-14 22:10:50 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:10:50 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:10:50 --> Final output sent to browser
+DEBUG - 2014-04-14 22:10:50 --> Total execution time: 0.1880
+DEBUG - 2014-04-14 22:13:51 --> Config Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:13:51 --> URI Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Router Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Output Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Security Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Input Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:13:51 --> Language Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Language Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Config Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:13:51 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:13:51 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:13:51 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:13:51 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:13:51 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Template Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:13:51 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:13:51 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:13:51 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:13:51 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:13:51 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:13:51 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:13:51 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:13:51 --> File loaded: ../ci/application/../modules/media/views/view_index.php
+DEBUG - 2014-04-14 22:13:51 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:13:51 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:13:51 --> Final output sent to browser
+DEBUG - 2014-04-14 22:13:51 --> Total execution time: 0.1560
+DEBUG - 2014-04-14 22:13:52 --> Config Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:13:52 --> URI Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Router Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Output Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Security Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Input Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:13:52 --> Language Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Language Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Config Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:13:52 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:13:52 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:13:52 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:13:52 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:13:52 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:13:52 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:13:53 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> Template Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:13:53 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:13:53 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:13:53 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:13:53 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:13:53 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:13:53 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:13:53 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:13:53 --> Upload Class Initialized
+DEBUG - 2014-04-14 22:13:53 --> Language file loaded: language/english/upload_lang.php
+ERROR - 2014-04-14 22:13:53 --> You did not select a file to upload.
+DEBUG - 2014-04-14 22:13:53 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:13:53 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:13:53 --> Final output sent to browser
+DEBUG - 2014-04-14 22:13:53 --> Total execution time: 0.2430
+DEBUG - 2014-04-14 22:14:00 --> Config Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:14:00 --> URI Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Router Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Output Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Security Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Input Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:14:00 --> Language Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Language Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Config Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:14:00 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:14:00 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:14:00 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:14:00 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:14:00 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Template Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:14:00 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:14:00 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:14:00 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:14:00 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:14:00 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:14:00 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:14:00 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:14:00 --> Upload Class Initialized
+DEBUG - 2014-04-14 22:14:00 --> Image Lib Class Initialized
+DEBUG - 2014-04-14 22:14:01 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:14:01 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:14:01 --> Final output sent to browser
+DEBUG - 2014-04-14 22:14:01 --> Total execution time: 0.5580
+DEBUG - 2014-04-14 22:16:03 --> Config Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:16:03 --> URI Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Router Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Output Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Security Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Input Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:16:03 --> Language Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Language Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Config Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:16:03 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:16:03 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:16:03 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:16:03 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:16:03 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Template Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:16:03 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:16:03 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:16:03 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:16:03 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:16:03 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:16:03 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:16:03 --> Upload Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Image Lib Class Initialized
+DEBUG - 2014-04-14 22:16:03 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:16:03 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:16:03 --> Final output sent to browser
+DEBUG - 2014-04-14 22:16:03 --> Total execution time: 0.2220
+DEBUG - 2014-04-14 22:19:04 --> Config Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:19:04 --> URI Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Router Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Output Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Security Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Input Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:19:04 --> Language Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Language Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Config Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:19:04 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:19:04 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:19:04 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:19:04 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:19:04 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Template Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:19:04 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:19:04 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:19:04 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:19:04 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:19:04 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:19:04 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:19:04 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:19:04 --> File loaded: ../ci/application/../modules/media/views/view_index.php
+DEBUG - 2014-04-14 22:19:04 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:19:04 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:19:04 --> Final output sent to browser
+DEBUG - 2014-04-14 22:19:04 --> Total execution time: 0.1500
+DEBUG - 2014-04-14 22:19:06 --> Config Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:19:06 --> URI Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Router Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Output Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Security Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Input Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:19:06 --> Language Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Language Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Config Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:19:06 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:19:06 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:19:06 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:19:06 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:19:06 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Template Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:19:06 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:19:06 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:19:06 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:19:06 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:19:06 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:19:06 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:19:06 --> Upload Class Initialized
+DEBUG - 2014-04-14 22:19:06 --> Language file loaded: language/english/upload_lang.php
+ERROR - 2014-04-14 22:19:06 --> You did not select a file to upload.
+DEBUG - 2014-04-14 22:19:06 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:19:06 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:19:06 --> Final output sent to browser
+DEBUG - 2014-04-14 22:19:06 --> Total execution time: 0.2240
+DEBUG - 2014-04-14 22:19:14 --> Config Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:19:14 --> URI Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Router Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Output Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Security Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Input Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:19:14 --> Language Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Language Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Config Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:19:14 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:19:14 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:19:14 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:19:14 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:19:14 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Template Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:19:14 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:19:14 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:19:14 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:19:14 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:19:14 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:19:14 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:19:14 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:19:14 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:19:15 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:19:15 --> Upload Class Initialized
+DEBUG - 2014-04-14 22:19:15 --> Image Lib Class Initialized
+DEBUG - 2014-04-14 22:19:15 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:19:15 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:19:15 --> Final output sent to browser
+DEBUG - 2014-04-14 22:19:15 --> Total execution time: 0.1750
+DEBUG - 2014-04-14 22:49:44 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:49:44 --> URI Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Router Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Output Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Security Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Input Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:49:44 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:49:44 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:49:44 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:49:44 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:49:44 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:49:44 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:49:44 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Template Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:49:44 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:49:44 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:49:44 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:49:44 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:49:44 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:44 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:49:45 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> Email Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 22:49:45 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:49:45 --> Session Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 22:49:45 --> A session cookie was not found.
+DEBUG - 2014-04-14 22:49:45 --> Session routines successfully run
+DEBUG - 2014-04-14 22:49:45 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 22:49:45 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 22:49:45 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:49:45 --> URI Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Router Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Output Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Security Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Input Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:49:45 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:49:45 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:49:45 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:49:45 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:49:45 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:49:45 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Template Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:49:45 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:49:45 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:49:45 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:49:45 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:45 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:49:45 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> Email Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 22:49:45 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:49:45 --> Session Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 22:49:45 --> Session routines successfully run
+DEBUG - 2014-04-14 22:49:45 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 22:49:45 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:45 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/../modules/user/views/auth/view_login.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_modal.php
+DEBUG - 2014-04-14 22:49:45 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:49:45 --> Final output sent to browser
+DEBUG - 2014-04-14 22:49:45 --> Total execution time: 0.3170
+DEBUG - 2014-04-14 22:49:48 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:49:48 --> URI Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Router Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Output Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Security Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Input Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:49:48 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:49:48 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:49:48 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:49:48 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:49:48 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:49:48 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Template Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:49:48 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:49:48 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:49:48 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:49:48 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:48 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:49:48 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:49:48 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:48 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 22:49:48 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:48 --> Email Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 22:49:48 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:49:48 --> Session Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 22:49:48 --> Session routines successfully run
+DEBUG - 2014-04-14 22:49:48 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 22:49:48 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 22:49:48 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:48 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:48 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 22:49:48 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 22:49:48 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2014-04-14 22:49:49 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:49:49 --> URI Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Router Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Output Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Security Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Input Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:49:49 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:49:49 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:49:49 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:49:49 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:49:49 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:49:49 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Template Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:49:49 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:49:49 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:49:49 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:49:49 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:49 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:49:49 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:49 --> Email Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 22:49:49 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:49:49 --> Session Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 22:49:49 --> Session routines successfully run
+DEBUG - 2014-04-14 22:49:49 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 22:49:49 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:49 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/views/admin/view_index.php
+DEBUG - 2014-04-14 22:49:49 --> Carabiner: Cache file 13974816557a3da7558a48a56dc679cb9bf9b47e91.css was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/themes/admin/views/partials/partial_header.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/themes/admin/views/partials/partial_sidebar_offcanvas.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_main.php
+DEBUG - 2014-04-14 22:49:49 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:49:49 --> Final output sent to browser
+DEBUG - 2014-04-14 22:49:49 --> Total execution time: 0.3240
+DEBUG - 2014-04-14 22:49:52 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:49:52 --> URI Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Router Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Output Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Security Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Input Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:49:52 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Language Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Config Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:49:52 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:49:52 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:49:52 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:49:52 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:49:52 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Template Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:49:52 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:49:52 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:49:52 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:49:52 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:52 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:49:52 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:52 --> Email Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 22:49:52 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:49:52 --> Session Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 22:49:52 --> Session routines successfully run
+DEBUG - 2014-04-14 22:49:52 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 22:49:52 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:49:52 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/product/models/product_model.php
+DEBUG - 2014-04-14 22:49:52 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:52 --> File loaded: ../ci/application/../modules/category/models/product_category_model.php
+DEBUG - 2014-04-14 22:49:52 --> Model Class Initialized
+DEBUG - 2014-04-14 22:49:53 --> File loaded: ../ci/application/../modules/product/views/admin/view_form.php
+DEBUG - 2014-04-14 22:49:53 --> File loaded: ../ci/application/themes/admin/views/partials/partial_header.php
+DEBUG - 2014-04-14 22:49:53 --> File loaded: ../ci/application/themes/admin/views/partials/partial_sidebar_offcanvas.php
+DEBUG - 2014-04-14 22:49:53 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 22:49:53 --> Carabiner: Cache file 13974817978474340d86825ffd93bdf98c5125688c.js was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 22:49:53 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_main.php
+DEBUG - 2014-04-14 22:49:53 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:49:53 --> Final output sent to browser
+DEBUG - 2014-04-14 22:49:53 --> Total execution time: 0.3390
+DEBUG - 2014-04-14 22:51:36 --> Config Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Hooks Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Utf8 Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> UTF-8 Support Enabled
+DEBUG - 2014-04-14 22:51:36 --> URI Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Router Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Output Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Security Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Input Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-14 22:51:36 --> Language Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Language Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Config Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Loader Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Config file loaded: ../ci/application/config/asset.php
+DEBUG - 2014-04-14 22:51:36 --> Config file loaded: ../ci/application/config/cms_config.php
+DEBUG - 2014-04-14 22:51:36 --> Config file loaded: ../ci/application/config/cms_cache.php
+DEBUG - 2014-04-14 22:51:36 --> Config file loaded: ../ci/application/config/template.php
+DEBUG - 2014-04-14 22:51:36 --> Config file loaded: ../ci/application/config/images.php
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: html_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: url_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: text_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: asset_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: debug_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: function_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: image_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: file_helper
+DEBUG - 2014-04-14 22:51:36 --> Database Driver Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> User Agent Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Template Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> cURL Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Cache Class Initialized.
+DEBUG - 2014-04-14 22:51:36 --> Controller Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Breadcrumb Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Carabiner: Library initialized.
+DEBUG - 2014-04-14 22:51:36 --> Config file loaded: ../ci/application/config/carabiner.php
+DEBUG - 2014-04-14 22:51:36 --> Carabiner: config loaded from config file.
+DEBUG - 2014-04-14 22:51:36 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:51:36 --> Carabiner: library configured.
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: form_helper
+DEBUG - 2014-04-14 22:51:36 --> Form Validation Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Language file loaded: language/english/profiler_lang.php
+DEBUG - 2014-04-14 22:51:36 --> File loaded: ../ci/application/../modules/user/libraries/Ion_auth.php
+DEBUG - 2014-04-14 22:51:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:51:36 --> Email Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2014-04-14 22:51:36 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: cookie_helper
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: language_helper
+DEBUG - 2014-04-14 22:51:36 --> Session Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: string_helper
+DEBUG - 2014-04-14 22:51:36 --> Session routines successfully run
+DEBUG - 2014-04-14 22:51:36 --> Model Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-14 22:51:36 --> File loaded: ../ci/application/../modules/user/models/ion_auth_model.php
+DEBUG - 2014-04-14 22:51:36 --> Model Class Initialized
+DEBUG - 2014-04-14 22:51:36 --> File loaded: ../ci/application/../modules/user/config/ion_auth.php
+DEBUG - 2014-04-14 22:51:36 --> Helper loaded: date_helper
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/../modules/user/libraries/Bcrypt.php
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/../modules/product/models/product_model.php
+DEBUG - 2014-04-14 22:51:37 --> Model Class Initialized
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/../modules/category/models/product_category_model.php
+DEBUG - 2014-04-14 22:51:37 --> Model Class Initialized
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/../modules/product/views/admin/view_form.php
+DEBUG - 2014-04-14 22:51:37 --> Carabiner: Cache file 13974906947a3da7558a48a56dc679cb9bf9b47e91.css was written to F:\Server\htdocs\ciledug-racing\public_html\cache/
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/themes/admin/views/partials/partial_header.php
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/themes/admin/views/partials/partial_sidebar_offcanvas.php
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/themes/admin/views/partials/alert.php
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/themes/admin/views/layouts/layout_main.php
+DEBUG - 2014-04-14 22:51:37 --> File loaded: ../ci/application/views/profiler_template.php
+DEBUG - 2014-04-14 22:51:37 --> Final output sent to browser
+DEBUG - 2014-04-14 22:51:37 --> Total execution time: 0.2120

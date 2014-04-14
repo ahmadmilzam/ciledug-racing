@@ -132,7 +132,7 @@ class Admin extends Admin_Controller {
 
       if($category_id)
       {
-        $this->session->set_flashdata('success', ucfirst($type) . ' Has been saved successfully');
+        $this->session->set_flashdata('success', ucfirst($type) . ' has been saved successfully');
         redirect('admin/category/index/'.$type);
       }
     }

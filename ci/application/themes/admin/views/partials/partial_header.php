@@ -23,7 +23,7 @@
             <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header bg-light-blue">
-                    <img src="<?php echo base_url('assets/uploads/avatars/default.png'); ?>" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url('media/avatars/default.png'); ?>" class="img-circle" alt="User Image" />
                     <p>
                         <?php echo userdata('first_name').' '.userdata('last_name'); ?>
                         <small>Member since <?php echo date('M, Y', userdata('created_on')) ?></small>

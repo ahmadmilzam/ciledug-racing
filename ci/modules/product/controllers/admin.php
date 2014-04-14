@@ -5,115 +5,134 @@
  */
 class Admin extends Admin_Controller {
 
-    public function __construct()
-    {
-      parent::__construct();
-      $this->load->model('product_model', 'product');
-      $this->load->model('category/product_category_model', 'category');
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->model('product_model', 'product');
+    $this->load->model('category/product_category_model', 'category');
+  }
+
+  /**
+   * Product List
+   */
+  public function index()
+  {
+    echo 'Product List';
+  }
+
+  /**
+   * Product Form
+   * @param  boolean $id [product id]
+   */
+  public function form($id = FALSE)
+  {
+    /**
+     * fect all categories from db
+     * and reformat to associative from form_dropdown helper
+     * with first key is default value or parent category
+     * @var array
+     */
+    $array = array( '' => 'Select Category' );
+    $categories = $this->category->dropdown('name');
+    foreach ($categories as $key => $value) {
+      $array[$key] = $value;
     }
 
-    /**
-     * Product List
-     */
-    public function index()
-    {
-      echo 'Product List';
-    }
+    // $category_array = $this->category->dropdown('name');
+    // var_dump($category_array); exit;
+    // $first_array  = array("0" => 'Select Category');
 
-    /**
-     * Product Form
-     * @param  boolean $id [product id]
-     */
-    public function form($id = FALSE)
+    $data['dropdown_categories'] = $this->category->dropdown('name');
+
+    //declare empty variable
+    $data['id_product']  = '';
+    $data['id_category'] = '';
+    $data['name']        = '';
+    $data['excerpt']     = '';
+    $data['description'] = '';
+    $data['price']       = '';
+    $data['slug']        = '';
+    $data['images']      = '';
+
+    if($id)
     {
-      /**
-       * fect all categories from db
-       * and reformat to associative from form_dropdown helper
-       * with first key is default value or parent category
-       * @var array
-       */
-      $array = array( '' => 'Select Category' );
-      $categories = $this->category->dropdown('name');
-      foreach ($categories as $key => $value) {
-        $array[$key] = $value;
+      //now fetch the product from db
+      $product = $this->product->get($id);
+
+      //if result is empty
+      if(!$product)
+      {
+        //set flash error msg and redirect to product index page
+        $this->session->set_flashdata('error', 'Error product not found');
+        redirect('admin/product');
       }
 
-      // $category_array = $this->category->dropdown('name');
-      // var_dump($category_array); exit;
-      // $first_array  = array("0" => 'Select Category');
+      //store the product data into empty variables above
+      $data['id_product']  = $id;
+      $data['id_category'] = $product->id_category;
+      $data['name']        = $product->name;
+      $data['excerpt']     = $product->excerpt;
+      $data['description'] = $product->description;
+      $data['slug']        = $product->slug;
+      $data['price']       = $product->price;
+      $data['images']      = (array)json_decode($product->images);
+    }
 
-      $data['dropdown_categories'] = $this->category->dropdown('name');
+    if( $this->input->post('submit') )
+    {
+      if ($this->input->post('slug') == '')
+      {
+        $slug = url_slug($this->input->post('name'));
+      }
+      else
+      {
+        $slug = url_slug($this->input->post('slug'));
+      }
 
-      //declare empty variable
-      $data['id_product']  = '';
-      $data['id_category'] = '';
-      $data['name']        = '';
-      $data['excerpt']     = '';
-      $data['description'] = '';
-      $data['price']       = '';
-      $data['slug']        = '';
-      $data['images']      = '';
+      $save = array(
+        'id_category' => $this->input->post('category'),
+        'name'        => $this->input->post('name'),
+        'excerpt'     => $this->input->post('excerpt'),
+        'description' => $this->input->post('description'),
+        'slug'        => $slug,
+        'price'       => $this->input->post('price'),
+      );
+
+      $upload_images       = $this->input->post('images');
+      if($primary = $this->input->post('primary'))
+      {
+        if($upload_images)
+        {
+          foreach($upload_images as $key => &$pi)
+          {
+              if($primary == $key)
+              {
+                  $pi['primary']  = true;
+                  continue;
+              }
+          }
+        }
+      }
+      $save['images']      = json_encode($upload_images);
 
       if($id)
       {
-        //now fetch the product from db
-        $product = $this->product->get($id);
-
-        //if result is empty
-        if(!$product)
-        {
-          //set flash error msg and redirect to product index page
-          $this->session->set_flashdata('error', 'Error product not found');
-          redirect('admin/product');
-        }
-
-        //store the product data into empty variables above
-        $data['id_product']  = $id;
-        $data['id_category'] = $product->id_category;
-        $data['name']        = $product->name;
-        $data['excerpt']     = $product->excerpt;
-        $data['description'] = $product->description;
-        $data['slug']        = $product->slug;
-        $data['price']       = $product->price;
-        $data['images']      = (array)json_decode($product->images);
+        $product_id = $this->product->update($id, $save);
       }
-
-      if( $this->input->post('submit') )
+      else
       {
-        if ($this->input->post('slug') == '')
-        {
-          $slug = url_slug($this->input->post('name'));
-        }
-        else
-        {
-          $slug = url_slug($this->input->post('slug'));
-        }
-
-        $save = array(
-          'id_category' => $this->input->post('category'),
-          'name'        => $this->input->post('name'),
-          'excerpt'     => $this->input->post('excerpt'),
-          'description' => $this->input->post('description'),
-          'slug'        => $slug,
-          'price'       => $this->input->post('price'),
-          'images'      => $this->input->post('images')
-        );
-        if($id)
-        {
-          $product_id = $this->product->update($save);
-        }
-        else
-        {
-          $product_id = $this->product->update($save);
-        }
-
-        if(!$product_id)
-        {
-          $this->session->set_flashdata('error', 'An error occured, product could not be saved');
-          redirect('admin/product');
-        }
+        $product_id = $this->product->insert($save);
       }
 
+      if($product_id)
+      {
+        $this->session->set_flashdata('success', 'Ptoduct has been saved successfully');
+        redirect('admin/product');
+      }
+    }
+
+    if($this->form_validation->run() === FALSE)
+    {
       /**
        * define input field for login form
        * 1. product name (text)
@@ -214,6 +233,7 @@ class Admin extends Admin_Controller {
       //[1]
       $this->local_js = array(
         array('plugins/bootstrap-file-input/bs-file-input.js'),
+        array('plugins/ajaxfileupload/ajaxfileupload.js'),
         array('local/product.js')
       );
 
@@ -229,14 +249,81 @@ class Admin extends Admin_Controller {
            ->title($this->config->item('site_name'), $data['page_name'])
            ->build('admin/view_form', $data);
     }
+  }
 
-    public function test()
+  function upload()
+  {
+    //init var
+    $status = "";
+    $msg = "";
+    $file = "";
+
+    $config = array(
+      'upload_path' => './media/product/',
+      'allowed_types' => 'gif|jpg|jpeg|png',
+      'max_size' => '1024',
+      'encrypt_name' => true,
+      'remove_spaces' => true
+    );
+    //initialize upload lib with config
+    $this->load->library('upload', $config);
+
+    if (! $this->upload->do_upload('file'))
     {
-      $data = array();
-      $this->template
-           ->title($this->config->item('site_name'), 'Test')
-           ->build('admin/view_test', $data);
+      $status = 'Error';
+      $msg = $this->upload->display_errors('', '');
     }
+    else
+    {
+      $uploaded = $this->upload->data();
+      /*
+       *Array
+        (
+        [file_name] => png1.jpg
+        [file_type] => image/jpeg
+        [file_path] => /home/ipresupu/public_html/uploads/
+        [full_path] => /home/ipresupu/public_html/uploads/png1.jpg
+        [raw_name] => png1
+        [orig_name] => png.jpg
+        [client_name] => png.jpg
+        [file_ext] => .jpg
+        [file_size] => 456.93
+        [is_image] => 1
+        [image_width] => 1198
+        [image_height] => 1166
+        [image_type] => jpeg
+        [image_size_str] => width="1198" height="1166"
+        )
+       */
+
+      $this->load->library('image_lib');
+
+      //resize large image to thumb image
+      $config['image_library'] = 'gd2';
+      $config['source_image'] = './media/product/'.$uploaded['file_name'];
+      $config['new_image'] = './media/product/thumb/'.$uploaded['file_name'];
+      $config['maintain_ratio'] = true;
+      $config['width'] = 80;
+      $config['height'] = 80;
+      $this->image_lib->initialize($config);
+      $this->image_lib->fit();
+      $this->image_lib->clear();
+
+      $status = "Success";
+      $msg = "File successfully uploaded";
+      $file = $uploaded['file_name'];
+    }
+    echo json_encode(array('status' => $status, 'msg' => $msg, 'file' => $file));
+  }
+
+
+  public function test()
+  {
+    $data = array();
+    $this->template
+         ->title($this->config->item('site_name'), 'Test')
+         ->build('admin/view_test', $data);
+  }
 
 }
 
