@@ -140,8 +140,9 @@ class Admin extends Admin_Controller {
        * 3. product description (textarea)
        * 4. product price (text)
        * 5. product slug (text)
-       * 6. product images (hidden text)
-       * 7. product categories (select dropdown)
+       * 6. product categories (select dropdown)
+       * 7. product images array (in view_form)
+       * 8. product image file upload
        */
       //[1]
       $data['input_name'] = array(
@@ -188,13 +189,6 @@ class Admin extends Admin_Controller {
         'value'       => $this->form_validation->set_value('slug', $data['slug']),
       );
       //[6]
-      $data['input_image'] = array(
-        'class' => 'form-control',
-        'name'  => 'images',
-        'type'  => 'hidden',
-        // 'required' => 'required'
-      );
-      //[7]
       $data['input_dropdown_categories'] = $array;
 
       //[8]
@@ -219,8 +213,8 @@ class Admin extends Admin_Controller {
       //[10]
       $data['upload_button'] = array(
         'class' => 'btn btn-info',
-        'type'=>'submit',
-        'name'=>'submit',
+        'type'=>'buttom',
+        'name'=>'upload',
         'content' => 'Upload',
         'id'=>'js-upload-button'
       );
@@ -232,9 +226,9 @@ class Admin extends Admin_Controller {
        */
       //[1]
       $this->local_js = array(
-        array('plugins/bootstrap-file-input/bs-file-input.js'),
-        array('plugins/ajaxfileupload/ajaxfileupload.js'),
-        array('local/product.js')
+        array('lib/bootstrap-file-input/bs-file-input.js'),
+        array('lib/ajaxfileupload/ajaxfileupload.js'),
+        array('js/local/product.js')
       );
 
       //[2]
@@ -314,6 +308,7 @@ class Admin extends Admin_Controller {
       $file = $uploaded['file_name'];
     }
     echo json_encode(array('status' => $status, 'msg' => $msg, 'file' => $file));
+    exit;
   }
 
 

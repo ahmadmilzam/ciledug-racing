@@ -21,13 +21,13 @@ class MY_Controller extends MX_Controller {
       $this->load->library('carabiner');
 
       $carabiner_config = [
-          'script_dir'    => 'assets/themes/'. $this->template->get_theme() .'/js/',
-          'style_dir'     => 'assets/themes/'. $this->template->get_theme() .'/css/',
+          'script_dir'    => 'assets/'. $this->template->get_theme() .'/',
+          'style_dir'     => 'assets/'. $this->template->get_theme() .'/',
           'cache_dir'     => 'cache/',
           'combine'       => TRUE,
-          'minify_css'    => FALSE,
+          'minify_css'    => ENVIRONMENT == 'development'? FALSE : TRUE,
           'base_uri'      => base_url(),
-          'minify_js'     => FALSE
+          'minify_js'     => ENVIRONMENT == 'development'? FALSE : TRUE
       ];
       //initialize carabinner library with config
       $this->carabiner->config($carabiner_config);
@@ -68,20 +68,19 @@ class Admin_Controller extends MY_Controller {
      */
     //[1]
     $this->main_css = array(
-      array('bootstrap.css'),
-      array('bootstrap.css.map'),
-      array('plugins/font-awesome.css'),
-      array('plugins/ionicons.css'),
-      array('admin.css')
+      array('css/bootstrap.css'),
+      array('css/font-awesome.css'),
+      array('css/ionicons.css'),
+      array('css/admin.css')
     );
     //[2]
     $this->main_js = array(
-      array('jquery-2.1.0.js'),
-      array('jquery-ui-1.10.3.min.js'),
-      array('bootstrap.min.js'),
-      array('required_plugin.js'),
-      array('plugins/bootbox/bootbox.min.js'),
-      array('app.js'),
+      array('js/jquery-2.1.0.js'),
+      array('js/jquery-ui-1.10.3.min.js'),
+      array('js/bootstrap.min.js'),
+      array('js/required_plugin.js'),
+      array('lib/bootbox/bootbox.min.js'),
+      array('js/app.js'),
     );
     //[3]
     $this->carabiner->group('main_css', ['css'=>$this->main_css] );

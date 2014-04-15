@@ -16,6 +16,7 @@
 |
 */
 
+$config["image_sizes"]["thumb"] = array(80, 80);//width , height
 $config["image_sizes"]["square"] = array(150, 150);
 $config["image_sizes"]["long"]   = array(280, 600);
 $config["image_sizes"]["wide"]   = array(600, 200);

@@ -8,18 +8,20 @@
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
-      <div class="tab-pane active" id="detail-tab">
-        <!-- form class row -->
-        <?php echo form_open('admin/product/form'.$id_product, array('class'=>'row')); ?>
+    <?php echo form_open('admin/product/form'.$id_product); ?><!-- form open -->
+    <div class="tab-content"><!-- tab content -->
+
+      <div class="tab-pane active" id="detail-tab"><!-- product detail tab -->
+
+        <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
               <div class="form-group">
                 <?php echo form_label('Product name'); ?>
                 <?php echo form_input($input_name); ?>
               </div>
               <div class="form-group">
-                <?php echo form_label('Product slug'); ?>
-                <?php echo form_input($input_slug); ?>
+                <?php echo form_label('Product excerpt'); ?>
+                <?php echo form_textarea($input_excerpt); ?>
               </div>
               <div class="form-group">
                 <?php echo form_label('Product description'); ?>
@@ -28,9 +30,10 @@
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="form-group">
-              <?php echo form_label('Product excerpt'); ?>
-              <?php echo form_textarea($input_excerpt); ?>
+              <?php echo form_label('Product slug'); ?>
+              <?php echo form_input($input_slug); ?>
             </div>
+
             <div class="form-group">
               <?php echo form_label('Product price'); ?>
               <?php echo form_input($input_slug); ?>
@@ -45,9 +48,12 @@
               <?php echo form_button($submit_button); ?>
             </div>
           </div>
-        <?php echo form_close(); ?><!-- form class row -->
-      </div>
-      <div class="tab-pane" id="image-tab">
+        </div>
+
+      </div><!-- end product detail tab -->
+
+      <div class="tab-pane" id="image-tab"><!-- product img tab -->
+
         <div class="row">
           <div class="col-lg-12 ajaxfileupload-form">
             <?php echo form_upload($input_file); ?>
@@ -55,68 +61,54 @@
           </div>
         </div>
 
-        <!-- per product -->
-        <div class="row product-row">
+        <div id="product-img-list">
+          <?php if (isset($images) && is_array($images) && count($images) > 0): ?><!-- if condition 1 -->
 
-          <div class="col-lg-2 col-md-3 col-xs-12">
-            <a href="#" class="thumbnail">
-              <img src="<?php echo base_url('media/avatars/default.png'); ?>" alt="">
-            </a>
-          </div>
+            <?php foreach($images as $img_id => $img_obj): ?><!-- foreach loop -->
 
-          <div class="col-lg-10 col-md-9 col-xs-12">
-            <div class="form-group">
-              <label>Alt Tag:</label>
-              <input type="text" class="form-control" placeholder="Alt tag">
-            </div>
-            <div class="form-group">
-              <label>Caption:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
+              <?php if (!empty($img_obj)): ?><!-- if condition 2 -->
 
-          <div class="col-xs-12 text-right">
-            <label class="radio-inline">
-              <input type="radio" name="main"> Main Image
-            </label>
-            <a href="#" class="btn btn-danger js-delete-img margin-left"><i class="fa fa-trash-o"></i> Delete</a>
-          </div>
+                <div class="row product-img-row" id="img_<?php echo $img_id;?>" ><!-- per product -->
 
-        </div>
-        <!-- per product -->
+                  <div class="col-lg-2 col-md-3 col-xs-12">
+                    <a href="#" class="thumbnail">
+                      <input type="hidden" name="images[<?php echo $img_id; ?>][filename]" value="<?php echo $img['filename']; ?>">
+                      <img src="<?php echo base_url('media/product/thumb/'.$img['filename']); ?>" alt="<?php echo $img['alt'];?>">
+                    </a>
+                  </div>
 
-        <!-- per product -->
-        <div class="row product-row">
+                  <div class="col-lg-10 col-md-9 col-xs-12">
+                    <div class="form-group">
+                      <label>Alt Tag:</label>
+                      <input class="form-control" type="text" name="images[<?php echo $img_id;?>][alt]" placeholder="Alt tag" value="<?php echo $img['alt'];?>">
+                    </div>
+                    <div class="form-group">
+                      <label>Caption:</label>
+                      <textarea class="form-control" rows="3" name="images[<?php echo $img_id;?>][caption]" class="input-wide" placeholder="Caption"><?php echo $img['caption'];?></textarea>
+                    </div>
+                  </div>
 
-          <div class="col-lg-2 col-md-3 col-xs-12">
-            <a href="#" class="thumbnail">
-              <img src="<?php echo base_url('media/avatars/default.png'); ?>" alt="">
-            </a>
-          </div>
+                  <div class="col-xs-12 text-right">
+                    <label class="radio-inline">
+                      <input type="radio" id="primary_image_<?php echo $img_id;?>" name="primary" value="<?php echo $img_id;?>" <?php if(isset($img['primary'])) echo 'checked="checked"';?>> Main Image
+                    </label>
+                    <a href="javascript:;" class="btn btn-danger js-delete-img margin-left" data-id="<?php echo $img_id;?>"><i class="fa fa-trash-o"></i> Delete</a>
+                  </div>
 
-          <div class="col-lg-10 col-md-9 col-xs-12">
-            <div class="form-group">
-              <label>Alt Tag:</label>
-              <input type="text" class="form-control" placeholder="Alt tag">
-            </div>
-            <div class="form-group">
-              <label>Caption:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
+                </div><!-- per product -->
 
-          <div class="col-xs-12 text-right">
-            <label class="radio-inline">
-              <input type="radio" name="main"> Main Image
-            </label>
-            <a href="#" class="btn btn-danger js-delete-img margin-left"><i class="fa fa-trash-o"></i> Delete</a>
-          </div>
+              <?php endif ?><!-- end if condition 2 -->
+
+            <?php endforeach ?><!-- end foreach loop -->
+
+          <?php endif ?><!-- end if condition 1 -->
 
         </div>
-        <!-- per product -->
 
-      </div>
-    </div>
+      </div><!-- end product img tab -->
+
+    </div><!-- end tab content -->
+    <?php echo form_close(); ?><!-- form close -->
   </div>
 </div>
-<script src="<?php echo base_url('assets/lib/ckeditor/ckeditor.js'); ?>"></script>
+<script src="<?php echo base_url('assets/'.$this->template->get_theme().'/lib/ckeditor/ckeditor.js'); ?>"></script>

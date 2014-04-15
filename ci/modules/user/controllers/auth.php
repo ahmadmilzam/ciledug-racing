@@ -14,11 +14,10 @@ class Auth extends MY_Controller {
 
     //set assets
     $this->main_css = array(
-      array('bootstrap.css'),
-      array('bootstrap.css.map'),
-      array('plugins/font-awesome.css'),
-      array('plugins/ionicons.css'),
-      array('admin.css')
+      array('css/bootstrap.css'),
+      array('css/font-awesome.css'),
+      array('css/ionicons.css'),
+      array('css/admin.css')
     );
     $this->carabiner->group('main_css', ['css'=>$this->main_css] );
   }
@@ -108,9 +107,9 @@ class Auth extends MY_Controller {
        */
       //[1]
       $this->local_js = [
-        ['jquery-2.1.0.js'],
-        ['bootstrap.min.js'],
-        ['local/login.js']
+        ['js/jquery-2.1.0.js'],
+        ['js/bootstrap.min.js'],
+        ['js/local/login.js']
       ];
 
       //[2]

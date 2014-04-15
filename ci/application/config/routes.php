@@ -39,7 +39,7 @@
 */
 
 $default_controller                         = "page";//contoh controller helo
-$controller_exceptions                      = array('admin','user', 'media', 'editor');
+$controller_exceptions                      = array('admin','user', 'media', 'editor', 'test');
 
 $route['default_controller']                = $default_controller;
 $route['404_override']                      = '';

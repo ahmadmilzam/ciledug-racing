@@ -57,6 +57,17 @@ function url_slug($str, $separator = '-', $lowercase = FALSE)
     return trim($str, $separator);
 }
 
+function format_symbol_char($str)
+{
+    //Format the string
+    $str = strtr($str, 'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+
+    // replace characters other than letters, numbers and . by _
+    $str = preg_replace('/([^.a-z0-9]+)/i', '_', $str);
+
+    return $str;
+}
+
 /*
  * helper function that try to get property of an object
  * and return it
