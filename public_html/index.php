@@ -28,7 +28,10 @@ $root = dirname(__FILE__);
 // var_dump($root); exit;
 switch ($root) {
 		//change your project path here
-    case 'F:\Server\htdocs\ciledug-racing\public_html':
+		// laptop kantor
+    case 'D:\server\htdocs\project_cldr\public_html':
+		// PC Rumah
+    // case 'F:\Server\htdocs\ciledug-racing\public_html':
     // case 'F:\Server\htdocs\ahmadmilzam\public_html':
         $enviroment = 'development';
     break;

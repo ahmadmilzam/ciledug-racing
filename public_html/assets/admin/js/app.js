@@ -13,7 +13,7 @@ $(function() {
     "use strict";
 
     /*DOM READY!*/
-
+    custom_check_radio();
     //Enable sidebar toggle
     $("[data-toggle='offcanvas']").click(function(e) {
         e.preventDefault();
@@ -119,16 +119,6 @@ $(function() {
         _fix();
     });
 
-    /*
-     * We are gonna initialize all checkbox and radio inputs to
-     * iCheck plugin in.
-     * You can find the documentation at http://fronteed.com/iCheck/
-     */
-    $("input[type='checkbox'], input[type='radio']").iCheck({
-        checkboxClass: 'icheckbox_flat',
-        radioClass: 'iradio_flat'
-    });
-
     //Make the dashboard widgets sortable Using jquery UI
     $(".connectedSortable").sortable({
         placeholder: "sort-highlight",
@@ -139,6 +129,18 @@ $(function() {
     }).disableSelection();
 });
 
+/*
+ * We are gonna initialize all checkbox and radio inputs to
+ * iCheck plugin in.
+ * You can find the documentation at http://fronteed.com/iCheck/
+ */
+function custom_check_radio()
+{
+    $("input[type='checkbox'], input[type='radio']").iCheck({
+        checkboxClass: 'icheckbox_flat',
+        radioClass: 'iradio_flat'
+    });
+}
 
 /**
 *

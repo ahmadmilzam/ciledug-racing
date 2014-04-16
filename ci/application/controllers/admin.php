@@ -23,11 +23,11 @@ class Admin extends Admin_Controller {
        * 2. compile assets
        */
       //[1]
-      $this->local_js = [
-          ['local/dashboard.js']
-      ];
+      $this->local_js = array(
+        array('local/dashboard.js')
+      );
       //[2]
-      $this->carabiner->group('local_js', ['js'=>$this->local_js] );
+      $this->carabiner->group('local_js', array('js'=>$this->local_js) );
 
       //render view
       $data['page_name'] = 'Dashboard';
