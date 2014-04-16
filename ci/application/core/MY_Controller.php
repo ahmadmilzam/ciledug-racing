@@ -130,20 +130,6 @@ class Public_Controller extends MY_Controller {
     public function __construct()
     {
         parent::__construct();
-
-        $this->main_css = [
-            ['app.css']
-        ];
-
-        $this->main_js = [
-            ['core-public.min.js'],
-            ['app.js']
-        ];
-
-        $this->carabiner->group('main_css', ['css'=>$this->main_css] );
-        $this->carabiner->group('main_js', ['js'=>$this->main_js] );
-
-        $this->template->set_layout('public_layout');
     }
 
 }

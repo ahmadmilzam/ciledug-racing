@@ -113,7 +113,8 @@ class Admin extends Admin_Controller {
           }
         }
       }
-      $save['images']      = json_encode($upload_images);
+
+      $save['images'] = json_encode($upload_images);
 
       if($id)
       {
@@ -248,7 +249,7 @@ class Admin extends Admin_Controller {
   function upload()
   {
     //init var
-    $status = "";
+    $status = "500";
     $msg = "";
     $file = "";
 
@@ -264,7 +265,6 @@ class Admin extends Admin_Controller {
 
     if (! $this->upload->do_upload('file'))
     {
-      $status = 'Error';
       $msg = $this->upload->display_errors('', '');
     }
     else
@@ -303,7 +303,7 @@ class Admin extends Admin_Controller {
       $this->image_lib->fit();
       $this->image_lib->clear();
 
-      $status = "Success";
+      $status = "200";
       $msg = "File successfully uploaded";
       $file = $uploaded['file_name'];
     }

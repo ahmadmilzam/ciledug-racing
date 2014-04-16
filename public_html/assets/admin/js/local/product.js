@@ -19,7 +19,8 @@ jQuery.extend({
 $('.file-input').bootstrapFileInput();
 
 var uploading_text = 'Uploading <i class="fa fa-spinner fa-spin"></i>',
-    loading_text   = 'Loading <i class="fa fa-spinner fa-spin"></i>';
+    loading_text   = 'Loading <i class="fa fa-spinner fa-spin"></i>',
+    product_countainer = $('#product-img-list');
 
 $('#js-upload-button').on("click", function(e){
     e.preventDefault();
@@ -28,13 +29,6 @@ $('#js-upload-button').on("click", function(e){
         url = base_url + 'admin/product/upload/';
 
     $(this).html(uploading_text);
-    $(this)
-    .ajaxStart(function(){
-        $(this).html(uploading_text);
-    })
-    .ajaxComplete(function(){
-        $(this).html(old_text);
-    });
 
     $.ajaxFileUpload({
         url: url,
@@ -42,9 +36,18 @@ $('#js-upload-button').on("click", function(e){
         fileElementId: 'file',
         dataType: 'json',
         success : function(data, status) {
-            $('#title').val('');
-            $('#caption').val('');
-            refresh_files(data.file);
+            if(data.status == '500')
+            {
+                bootbox.alert(data.msg, function() {});
+            }
+            else
+            {
+                bootbox.alert(data.msg, function() {
+                    refresh_files(data.file);
+                    custom_check_radio();
+                });
+            }
+            $('#js-upload-button').html(old_text);
         },
         error : function(xhr, status, error) {
             bootbox.alert(xhr+' status = '+status+' error= '+error, function() {});
@@ -102,12 +105,46 @@ function refresh_files(data)
     var p = data.split('.'),
         id = p[0],
         filename = p[0]+'.'+p[1],
-        path = 'http://sukukhek.com/uploads/product_images/small/';
+        path = base_url+'media/product/thumb/';
 
-    var photo = '<div id="photo_'+id+'" class="photo-grid"><div class="span-small float-L"><input type="hidden" data-id="'+id+'" name="images['+id+'][filename]" value="'+filename+'"/><img class="thumbnail" src="'+path+filename+'"/></div><div class="span-large float-R"><input type="text" class="input-wide" name="images['+id+'][alt]" value="" placeholder="Alt tag"/><br><textarea name="images['+id+'][caption]" class="input-wide" placeholder="Caption"></textarea></div><span class="clear"></span><div class="row align-R"><input type="radio" id="primary_image_'+id+'" name="primary" value="'+id+'"><label for="primary_image_'+id+'">Main image</label><a href="#" rel="'+id+'" id="delete_img_link" class="button button-red"><i class="icon-white trash"></i>Delete</a></div></div>';
+    var row_product = '';
 
-    $('#img_list').append(photo);
+    row_product += '<div class="row product-img-row" id="img_'+id+'" >';
+
+    row_product += '<div class="col-lg-2 col-md-3 col-xs-12">';
+    row_product += '<a href="#" class="thumbnail">';
+    row_product += '<input type="hidden" name="images['+id+'][filename]" value="'+filename+'">';
+    row_product += '<img src="'+path+filename+'">';
+    row_product += '</a>';
+    row_product += '</div>';
+
+    row_product += '<div class="col-lg-10 col-md-9 col-xs-12">';
+
+    row_product += '<div class="form-group">';
+    row_product += '<label>Alt Tag:</label>';
+    row_product += '<input class="form-control" type="text" name="images['+id+'][alt]" placeholder="Alt tag">';
+    row_product += '</div>';
+
+    row_product += '<div class="form-group">';
+    row_product += '<label>Caption:</label>';
+    row_product += '<textarea class="form-control" rows="3" name="images['+id+'][caption]" class="input-wide" placeholder="Caption"></textarea>';
+    row_product += '</div>';
+
+    row_product += '</div>';
+
+    row_product += '<div class="col-xs-12 text-right">';
+
+    row_product += '<label class="radio-inline">';
+    row_product += '<input type="radio" id="primary_image_'+id+'" name="primary" value="<?php echo $img_id;?>"> Main Image';
+    row_product += '</label>';
+    row_product += '<a href="javascript:;" class="btn btn-danger js-delete-img margin-left" data-id="'+id+'"><i class="fa fa-trash-o"></i> Delete</a>';
+
+    row_product += '</div>';
+    row_product += '</div>';
+
+    product_countainer.append(row_product);
 }
+
 
 /**
  * function ajax for delete image or unlink

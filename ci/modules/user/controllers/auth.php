@@ -19,12 +19,9 @@ class Auth extends MY_Controller {
       array('css/ionicons.css'),
       array('css/admin.css')
     );
-    $this->carabiner->group('main_css', ['css'=>$this->main_css] );
+    $this->carabiner->group('main_css', array('css'=>$this->main_css) );
   }
-  public function index()
-  {
-    echo 'horeee';
-  }
+
   /**
    * Login Page
       TODO:
@@ -75,45 +72,46 @@ class Auth extends MY_Controller {
        * 3. submit button
        */
       //[1]
-      $data['input_email'] = [
-          'class' => 'form-control input-lg',
-          'name'     => 'email',
-          'type'     => 'email',
-          'placeholder' => 'Enter your email',
-          'value'    => $this->form_validation->set_value('email'),
-          'required' => 'required'
-      ];
-      //[2]
-      $data['input_password'] = [
-          'class' => 'form-control input-lg',
-          'name' => 'password',
-          'type' => 'password',
-          'placeholder' => 'Enter your password',
-          'value' => $this->form_validation->set_value('password'),
-          'required' => 'required'
-      ];
-      //[3]
-      $data['submit_button'] = [
-          'class' => 'btn btn-primary btn-lg btn-block',
-          'type' => 'submit',
-          'name' => 'submit',
-          'content' => 'Log In'
-      ];
+      $data['input_email'] = array(
+        'class' => 'form-control input-lg',
+        'name'     => 'email',
+        'type'     => 'email',
+        'placeholder' => 'Enter your email',
+        'value'    => $this->form_validation->set_value('email'),
+        'required' => 'required'
+      );
 
+      //[2]
+      $data['input_password'] = array(
+        'class' => 'form-control input-lg',
+        'name' => 'password',
+        'type' => 'password',
+        'placeholder' => 'Enter your password',
+        'value' => $this->form_validation->set_value('password'),
+        'required' => 'required'
+      );
+
+      //[3]
+      $data['submit_button'] = array(
+        'class' => 'btn btn-primary btn-lg btn-block',
+        'type' => 'submit',
+        'name' => 'submit',
+        'content' => 'Log In'
+      );
       /**
        * define partials css and js only for login page
        * 1. local js
        * 2. compile assets
        */
       //[1]
-      $this->local_js = [
-        ['js/jquery-2.1.0.js'],
-        ['js/bootstrap.min.js'],
-        ['js/local/login.js']
-      ];
+      $this->local_js = array(
+        array('js/jquery-2.1.0.js'),
+        array('js/bootstrap.min.js'),
+        array('js/local/login.js')
+      );
 
       //[2]
-      $this->carabiner->group('local_js', ['js'=>$this->local_js] );
+      $this->carabiner->group('local_js', array('js'=>$this->local_js) );
 
       //render view
       $this->template
@@ -142,34 +140,34 @@ class Auth extends MY_Controller {
        * 2. submit button
        */
       //[1]
-      $data['input_email'] = [
+      $data['input_email'] = array(
         'class'       => 'form-control input-lg',
         'name'        => 'email',
         'type'        => 'email',
         'placeholder' => 'Enter your email',
         'value'       => $this->form_validation->set_value('email'),
         'required'    => 'required'
-      ];
+      );
       //[2]
-      $data['submit_button'] = [
+      $data['submit_button'] = array(
         'type'    => 'submit',
         'name'    => 'submit',
         'class'   => 'btn btn-primary btn-lg btn-block',
         'content' => 'Submit'
-      ];
-
+      );
       /**
        * define partials css and js only for login page
        * 1. local js
        * 2. compile assets
        */
       //[1]
-      $this->local_js = [
-        ['jquery-2.1.0.js'],
-        ['bootstrap.min.js']
-      ];
+      $this->local_js = array(
+        array('jquery-2.1.0.js'),
+        array('bootstrap.min.js')
+      );
+
       //[2]
-      $this->carabiner->group('local_js', ['js'=>$this->local_js] );
+      $this->carabiner->group('local_js', array('js'=>$this->local_js) );
 
       //render template
       $this->template
@@ -263,23 +261,23 @@ class Auth extends MY_Controller {
         );
 
         //[4]
-        $data['submit_button'] = [
+        $data['submit_button'] = array(
           'type'    => 'submit',
           'name'    => 'submit',
           'class'   => 'btn btn-primary btn-lg btn-block',
           'content' => $this->lang->line('reset_password_submit_btn')
-        ];
-
+        );
         /**
          * define partials css and js only for login page
          * 1. local js
          * 2. compile assets
          */
         //[1]
-        $this->local_js = [
-          ['jquery-2.1.0.js'],
-          ['bootstrap.min.js']
-        ];
+        $this->local_js = array(
+          array('jquery-2.1.0.js'),
+          array('bootstrap.min.js')
+        );
+
         //[2]
         $this->carabiner->group('local_js', ['js'=>$this->local_js] );
 
