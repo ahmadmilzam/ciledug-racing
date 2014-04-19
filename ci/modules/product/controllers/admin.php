@@ -297,8 +297,8 @@ class Admin extends Admin_Controller {
       $config['source_image'] = './media/product/'.$uploaded['file_name'];
       $config['new_image'] = './media/product/thumb/'.$uploaded['file_name'];
       $config['maintain_ratio'] = true;
-      $config['width'] = 80;
-      $config['height'] = 80;
+      $config['width'] = 100;
+      $config['height'] = 100;
       $this->image_lib->initialize($config);
       $this->image_lib->fit();
       $this->image_lib->clear();

@@ -38,7 +38,7 @@ class MY_Controller extends MX_Controller {
       //load profiler only in development server
       //it is useful for benchmark and the the performance before uploading to production server
       $this->load->library('profiler');
-      $this->output->enable_profiler(ENVIRONMENT == 'development');
+      $this->output->enable_profiler(ENVIRONMENT == 'developmasent');
     }
 
 }

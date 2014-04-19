@@ -1,6 +1,6 @@
 CKEDITOR.replace('ckeditor', {
         "extraPlugins" : "imagebrowser",
-        "imageBrowser_listUrl" : base_url+"media/get_files",
+        "imageBrowser_listUrl" : base_url+"media/get_files/ckeditor",
         'filebrowserImageUploadUrl' : base_url+'editor/upload/',
     });
 

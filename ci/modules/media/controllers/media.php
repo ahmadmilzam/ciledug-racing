@@ -1,9 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Media extends MY_Controller {
+class Media extends Admin_Controller {
 
   public function __construct()
   {
+    //set template
+    $this->template->set_theme('admin');
     parent::__construct();
   }
 
@@ -11,6 +13,7 @@ class Media extends MY_Controller {
   {
     $this->load->view('view_index', array('error' => ''));
   }
+
 
   public function upload($type = '')
   {
@@ -28,7 +31,7 @@ class Media extends MY_Controller {
     $this->load->library('upload', $config);
     // dump_exit($config['upload_path']);
 
-    if (!$this->upload->do_upload())
+    if (!$this->upload->do_upload('file'))
     {
       //$error = array('error' => $this->upload->display_errors());
       //$this->load->view('upload', $error);
@@ -151,29 +154,87 @@ class Media extends MY_Controller {
     }
   }
 
-  public function get_files()
+  public function get_files($type = FALSE)
   {
     $files = array();
+    if(!$type)
+    {
+      show_404();
+    }
 
-    $dir = opendir(FCPATH . 'media/images/');
-    while ($file = readdir($dir)) {
+    switch ($type)
+    {
+      case 'product':
+        # code...
+        $dir = opendir(FCPATH . 'media/product/thumb');
+        break;
+
+      default:
+        # code...
+        $dir = opendir(FCPATH . 'media/images/');
+        break;
+    }
+
+    while ($file = readdir($dir))
+    {
         if ($file == '.' || $file == '..') {
             continue;
         }
-        $files[] = array(
-          'image' =>'/media/images/'.$file,
-          'thumb' =>'/media/images/'.$file,
-          'folder' => ''
-        );
-    }
-    // $fp = fopen('results.json', 'w');
-    // fwrite($fp, json_encode($files));
-    // fclose($fp);
+        if($type == 'ckeditor')
+        {
+          $files[] = array(
+            'image' =>'/media/images/'.$file,
+            'thumb' =>'/media/images/thumb/'.$file,
+            'folder' => ''
+          );
+        }
+        if($type == 'product')
+        {
+          $files[] = array(
+            'filename' =>$file,
+            'original' =>'media/product/'.$file,
+            'thumb' =>'media/product/thumb/'.$file,
+          );
+        }
 
-    // $this->output->set_content_type('application/json')->set_output(json_encode($files));
+    }
+
     header('Content-type: application/json');
     echo json_encode($files);
     exit;
+  }
+
+  public function browse()
+  {
+    /**
+     * define partials css and js only for login page
+     * 1. local css
+     * 2. local js
+     * 3. compile assets
+     */
+    //[1]
+    $this->local_css = array(
+      array('css/bootstrap.css'),
+      array('css/admin.css')
+    );
+
+    //[2]
+    $this->local_js = array(
+      array('js/jquery-2.1.0.js'),
+      array('js/bootstrap.min.js'),
+      array('lib/bootbox/bootbox.min.js'),
+      array('js/local/media.js')
+    );
+
+    //[3]
+    $this->carabiner->group('local_css', array('css'=>$this->local_css) );
+    $this->carabiner->group('local_js', array('js'=>$this->local_js) );
+
+    //render view
+    $this->template
+         ->set_layout('layout_blank')
+         ->title($this->config->item('site_name'), 'Browse File')
+         ->build('view_browse');
   }
 
   // public function resize()

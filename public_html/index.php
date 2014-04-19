@@ -29,10 +29,9 @@ $root = dirname(__FILE__);
 switch ($root) {
 		//change your project path here
 		// laptop kantor
-    case 'D:\server\htdocs\project_cldr\public_html':
+    case 'D:\server\htdocs\ciledug-racing\public_html':
 		// PC Rumah
     // case 'F:\Server\htdocs\ciledug-racing\public_html':
-    // case 'F:\Server\htdocs\ahmadmilzam\public_html':
         $enviroment = 'development';
     break;
     default:
@@ -219,6 +218,7 @@ if (defined('ENVIRONMENT'))
  * And away we go...
  *
  */
+// var_dump(FCPATH); exit;
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */
