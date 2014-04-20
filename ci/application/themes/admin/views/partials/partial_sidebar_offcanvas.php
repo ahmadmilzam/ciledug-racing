@@ -44,7 +44,7 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li class="<?php echo ($this->uri->segment(2) == 'product' && $this->uri->segment(3) == '') ? 'active' : ''; ?>">
+            <li class="<?php echo ($this->uri->segment(2) == 'product' && $this->uri->segment(3) == 'index') ? 'active' : ''; ?>">
               <a href="<?php echo base_url('admin/product/index'); ?>"><i class="fa fa-angle-double-right"></i> All Products</a>
             </li>
             <li class="<?php echo ($this->uri->segment(2) == 'product' && $this->uri->segment(3) == 'form') ? 'active' : ''; ?>">
@@ -55,16 +55,19 @@
             </li>
           </ul>
         </li>
-        <li class="treeview<?php echo $this->uri->segment(2) == 'banner' ? 'active' : ''; ?>"><!-- banners link -->
+        <li class="treeview <?php echo ($this->uri->segment(2) == 'banner')  ? 'active' : ''; ?>"><!-- banners link -->
           <a href="#">
             <i class="fa fa-bar-chart-o"></i>
             <span>Banners</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> All Banners</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Add New</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Categories</a></li>
+            <li class="<?php echo ($this->uri->segment(2) == 'banner' && $this->uri->segment(3) == 'index') ? 'active' : ''; ?>">
+              <a href="<?php echo base_url('admin/banner/index'); ?>"><i class="fa fa-angle-double-right"></i> All Banners</a>
+            </li>
+            <li class="<?php echo ($this->uri->segment(2) == 'banner' && $this->uri->segment(3) == 'form') ? 'active' : ''; ?>">
+              <a href="<?php echo base_url('admin/banner/form'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a>
+            </li>
           </ul>
         </li>
         <li class="treeview <?php echo $this->uri->segment(2) == 'media' ? 'active' : ''; ?>"><!-- media library link -->
@@ -76,6 +79,24 @@
           <ul class="treeview-menu">
             <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
             <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Add New</a></li>
+          </ul>
+        </li>
+        <li class="treeview <?php echo ($this->uri->segment(2) == 'user' OR $this->uri->segment(3) == 'create_user' OR $this->uri->segment(3) == 'create_group' ) ? 'active' : ''; ?>"><!-- users link -->
+          <a href="#">
+            <i class="fa fa-users"></i>
+            <span>Users</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li class="<?php echo ($this->uri->segment(2) == 'user' && $this->uri->segment(3) == '') ? 'active' : ''; ?>">
+              <a href="<?php echo base_url('admin/user/index'); ?>"><i class="fa fa-angle-double-right"></i> All Users</a>
+            </li>
+            <li class="<?php echo ($this->uri->segment(2) == 'user' && $this->uri->segment(3) == 'create_user') ? 'active' : ''; ?>">
+              <a href="<?php echo base_url('admin/user/create_user'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a>
+            </li>
+            <!-- <li class="<?php echo ($this->uri->segment(2) == 'user' && $this->uri->segment(3) == 'create_group') ? 'active' : ''; ?>">
+              <a href="<?php echo base_url('admin/user/create_group'); ?>"><i class="fa fa-angle-double-right"></i> Groups</a>
+            </li> -->
           </ul>
         </li>
 

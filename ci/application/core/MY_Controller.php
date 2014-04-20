@@ -20,15 +20,16 @@ class MY_Controller extends MX_Controller {
       //load carabiner asset management library
       $this->load->library('carabiner');
 
-      $carabiner_config = [
-          'script_dir'    => 'assets/'. $this->template->get_theme() .'/',
-          'style_dir'     => 'assets/'. $this->template->get_theme() .'/',
-          'cache_dir'     => 'cache/',
-          'combine'       => TRUE,
-          'minify_css'    => ENVIRONMENT == 'development'? FALSE : TRUE,
-          'base_uri'      => base_url(),
-          'minify_js'     => ENVIRONMENT == 'development'? FALSE : TRUE
-      ];
+      $carabiner_config = array(
+        'script_dir'    => 'assets/'. $this->template->get_theme() .'/',
+        'style_dir'     => 'assets/'. $this->template->get_theme() .'/',
+        'cache_dir'     => 'cache/',
+        'combine'       => TRUE,
+        'minify_css'    => ENVIRONMENT == 'development'? FALSE : TRUE,
+        'base_uri'      => base_url(),
+        'minify_js'     => ENVIRONMENT == 'development'? FALSE : TRUE
+      );
+
       //initialize carabinner library with config
       $this->carabiner->config($carabiner_config);
 
@@ -83,8 +84,8 @@ class Admin_Controller extends MY_Controller {
       array('js/app.js'),
     );
     //[3]
-    $this->carabiner->group('main_css', ['css'=>$this->main_css] );
-    $this->carabiner->group('main_js', ['js'=>$this->main_js] );
+    $this->carabiner->group('main_css', array('css'=>$this->main_css) );
+    $this->carabiner->group('main_js', array('js'=>$this->main_js) );
 
     //Prepend breadcrumb first link to dashboard
     $this->breadcrumb->prepend('<i class="fa fa-dashboard"></i> Dashboard', 'admin/dashboard');

@@ -23,7 +23,7 @@
         <div class="row fileupload-buttonbar">
             <div class="col-lg-7">
                 <!-- The fileinput-button span is used to style the file input field as button -->
-                <span class="btn btn-success fileinput-button">
+                <span class="btn btn-primary fileinput-button">
                     <i class="fa fa-plus"></i>
                     <span>Add files...</span>
                     <input type="file" name="userfile" multiple>

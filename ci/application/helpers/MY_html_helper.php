@@ -7,17 +7,16 @@
     {
       $attr = array('class'=>$type.' '. $type.'-info js-confirm');
     }
-		return anchor($uri, '<i class="fa fa-edit"></i> Edit', $attr);
+		return anchor($uri, '<i class="fa fa-pencil-square-o left"></i>', $attr);
 	}
-
-	function button_delete($uri, $confirm = FALSE, $type = 'btn')
+	function button_delete($uri, $confirm = TRUE, $type = 'btn')
 	{
     $attr = array('class'=>$type.' '. $type.'-danger');
     if($confirm)
     {
       $attr = array('class'=>$type.' '. $type.'-danger js-confirm-delete');
     }
-		return anchor($uri, '<i class="fa fa-trash-o"></i> Delete', $attr);
+		return anchor($uri, '<i class="fa fa-trash-o"></i>', $attr);
 	}
 
 	/**

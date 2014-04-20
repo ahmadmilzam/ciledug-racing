@@ -42,7 +42,7 @@
         <?php endif ?>
     </div>
 <?php endif;?>
-<?php if(function_exists('display_errors') && display_errors() != ''): ?>
+<?php if(function_exists('display_errors') &&  display_errors() != ''): ?>
     <div data-alert class="alert alert-danger alert radius">
         <a href="#" class="close js-alert-box-close" data-dismiss="alert" aria-hidden="true">&times;</a>
         <p class="text-large text-bold">Oh snap! You got an error(s)!</p>

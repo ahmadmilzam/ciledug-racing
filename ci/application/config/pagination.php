@@ -30,7 +30,7 @@ $config['next_link'] = '<i class="fa fa-caret-right"></i>';
 $config['next_tag_open'] = '<li>';
 $config['next_tag_close'] = '</li>';
 
-$config['cur_tag_open'] = '<li class="current"><a href="#">';
+$config['cur_tag_open'] = '<li class="active"><a href="#">';
 $config['cur_tag_close'] = '</a></li>';
 
 $config['num_tag_open'] = '<li>';

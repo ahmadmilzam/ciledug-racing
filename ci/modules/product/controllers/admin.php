@@ -38,10 +38,6 @@ class Admin extends Admin_Controller {
       $array[$key] = $value;
     }
 
-    // $category_array = $this->category->dropdown('name');
-    // var_dump($category_array); exit;
-    // $first_array  = array("0" => 'Select Category');
-
     $data['dropdown_categories'] = $this->category->dropdown('name');
 
     //declare empty variable
@@ -127,7 +123,7 @@ class Admin extends Admin_Controller {
 
       if($product_id)
       {
-        $this->session->set_flashdata('success', 'Ptoduct has been saved successfully');
+        $this->session->set_flashdata('success', 'Product has been saved successfully');
         redirect('admin/product');
       }
     }
