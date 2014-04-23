@@ -80,6 +80,8 @@ class Admin extends Admin_Controller {
      */
     public function form($id = FALSE)
     {
+
+
       /**
        * define input field for login form
        * 1. post name (text)
@@ -158,14 +160,15 @@ class Admin extends Admin_Controller {
       $data['dropdown_categories'] = $this->category->dropdown('name');
 
       //declare empty variable
-      $data['id_post']  = '';
+      $data['id_post']     = $id;
       $data['id_category'] = '';
       $data['name']        = '';
       $data['excerpt']     = '';
       $data['description'] = '';
-      $data['price']       = '';
       $data['slug']        = '';
-      $data['images']      = '';
+      $data['pubdate']     = '';
+      $data['thumbnail']   = '';
+      $data['active']      = '';
 
       if($id)
       {
@@ -187,8 +190,9 @@ class Admin extends Admin_Controller {
         $data['excerpt']     = $post->excerpt;
         $data['description'] = $post->description;
         $data['slug']        = $post->slug;
-        $data['price']       = $post->price;
-        $data['images']      = (array)json_decode($post->images);
+        $data['pubdate']     = $post->pubdate;
+        $data['thumbnail']   = $post->thumbnail;
+        $data['active']      = $post->active;
       }
 
       if( $this->input->post('submit') )
@@ -200,7 +204,8 @@ class Admin extends Admin_Controller {
           'description' => $this->input->post('description'),
           'slug'        => url_slug($this->input->post('slug')),
           'price'       => $this->input->post('price'),
-          'images'      => $this->input->post('images')
+          'images'      => $this->input->post('images'),
+          'active'      => $this->input->post('active')
         );
         if($id)
         {
