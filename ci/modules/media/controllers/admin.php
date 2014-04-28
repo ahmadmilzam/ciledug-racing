@@ -40,7 +40,7 @@ class Admin extends Admin_Controller {
 
       $config = array(
         'upload_path' => FCPATH . 'media/'.$category.'/',
-        'allowed_types' => 'gif|jpg|jpeg|png',
+        'allowed_types' => 'jpg|jpeg|png',
         'max_size' => '1024',
         'encrypt_name' => true,
         'remove_spaces' => true
@@ -118,14 +118,63 @@ class Admin extends Admin_Controller {
 
   }
 
-  public function unlink()
+  public function unlink($type = FALSE)
   {
-    $filename = $this->input->post('filename');
-    $category = $this->input->post('category');
+    $data['status'] = 500;
+    $data['msg']    = 'An error occured in deleting file.';
 
-    unlink(FCPATH.'/media/'.$category.'/'.$filename);
-    unlink(FCPATH.'/media/'.$category.'/thumb/'.$filename);
-    # code...
+    $category = 'images';
+    $filename = $this->input->post('file_name');
+
+    if ($this->input->post('category') && $this->input->post('category') !== '')
+    {
+      $category = $this->input->post('category');
+    }
+
+    if($type)
+    {
+      $category = $type;
+    }
+
+    $file_large = FCPATH.'/media/'.$category.'/'.$filename;
+    $file_thumb = FCPATH.'/media/'.$category.'/thumb/'.$filename;
+
+    if(file_exists($file_thumb))
+    {
+      unlink($file_large);
+      unlink($file_thumb);
+      $data['status'] = 200;
+      $data['msg']    = 'File has been successfully deleted.';
+    }
+
+    header('Content-type: application/json');
+    echo json_encode($data);
+    exit;
+
+  }
+
+  public function get_files()
+  {
+    $files = array();
+
+    $dir = opendir(FCPATH . 'media/images');
+
+    while ($file = readdir($dir))
+    {
+      if ($file == '.' || $file == '..') {
+          continue;
+      }
+
+      $files[] = array(
+        'image' =>'/media/images/'.$file,
+        'thumb' =>'/media/images/'.$file,
+        'folder' => ''
+      );
+    }
+
+    header('Content-type: application/json');
+    echo json_encode($files);
+    exit;
   }
 
 }

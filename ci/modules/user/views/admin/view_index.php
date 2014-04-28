@@ -1,12 +1,10 @@
 <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12 ">
-        <div class="btn-group">
-            <!-- Button Color Classes: [secondary alert success] -->
-            <?php echo anchor('admin/user/create_user', lang('index_create_user_link').' <i class="fa fa-plus-circle"></i>', array('class'=>'btn btn-default small secondary'))?>
-            <?php echo anchor('admin/user/create_group', lang('index_create_group_link').' <i class="fa fa-plus-circle"></i>', array('class'=>'btn btn-default small secondary'))?>
+        <!-- Button Color Classes: [secondary alert success] -->
+        <div class="margin-bottom">
+            <?php echo anchor('admin/user/create_user', lang('index_create_user_link').' <i class="fa fa-plus-circle"></i>', array('class'=>'btn btn-default btn-lg'))?>
         </div>
-        <br>
-        <br>
+
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>

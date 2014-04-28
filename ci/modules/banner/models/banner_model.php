@@ -13,6 +13,7 @@ class Banner_model extends MY_Model {
     //model primary key
     $this->primary_key = 'id_banner';
 
+    //skip validation
     $this->skip_validation = TRUE;
 
     //model trigger observer

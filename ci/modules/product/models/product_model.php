@@ -13,64 +13,43 @@ class Product_model extends MY_Model {
     //model primary key
     $this->primary_key = 'id_product';
 
+    //skip validation
+    $this->skip_validation = TRUE;
+
     //model trigger observer
     $this->before_create = array( 'created_at' );
     $this->before_update = array( 'updated_at' );
-
-    /**
-     * Model Validation List
-     * Set no validation for this 3 fields
-     * 1. Image Alt Tag
-     * 2. Image Caption
-     * 3. Image Primary
-     */
-    $this->validate = array(
-
-      array( 'field' => 'img_alt',/*[1]*/
-             'label' => 'Alt',
-             'rules' => '' ),
-      array( 'field' => 'img_caption',/*[2]*/
-             'label' => 'Caption',
-             'rules' => '' ),
-      array( 'field' => 'img_primary',/*[3]*/
-             'label' => 'Primary',
-             'rules' => 'callback_check_img' ),
-      array( 'field' => 'category_id',
-             'label' => 'Product Category',
-             'rules' => 'trim' ),
-      array( 'field' => 'name',
-             'label' => 'Product Name',
-             'rules' => 'trim|required|max_length[50]' ),
-      array( 'field' => 'excerpt',
-             'label' => 'Product Excerpt',
-             'rules' => 'trim|required|max_length[100]' ),
-      array( 'field' => 'description',
-             'label' => 'Product Description',
-             'rules' => 'trim|required' ),
-      array( 'field' => 'price',
-             'label' => 'Product Price',
-             'rules' => 'trim|numeric|floatval|required|greater_than[0]' ),
-      array( 'field' => 'images',
-             'label' => 'Product Images',
-             'rules' => 'callback_check_img' ),
-      array( 'field' => 'slug',
-             'label' => 'Product Slug',
-             'rules' => 'trim|max_length[100]' ),
-    );
   }
 
-  function check_img()/*callback function for check any uploaded img for product*/
+
+  public function delete_product($id)
   {
-    $img = $this->input->post('images');
-    //if img empty, warn user for upload
-    if(empty($img) || $img =='')
+    $json_image = $this->select('images')->get($id);
+    if($json_image)
     {
-      $this->form_validation->set_message('check_img', 'Image product is required, please upload some');
-      return false;
+      $images = (array)json_decode($json_image->images);
+      foreach($images as $img_id => $img_obj)
+      {
+        if (!empty($img_obj))
+        {
+          $img = (array)$img_obj;
+        }
+        // dump_exit($image);
+        $file_ori = './media/product/'.$img['filename'];
+        $file_thumb = './media/product/thumb/'.$img['filename'];
+        //delete the existing file if needed
+        if(file_exists($file_ori) && file_exists($file_thumb))
+        {
+          unlink($file_ori);
+          unlink($file_thumb);
+        }
+      }
+
+      return $this->delete($id);
     }
     else
     {
-      return true;
+      return FALSE;
     }
   }
 

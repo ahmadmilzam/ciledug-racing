@@ -10,9 +10,9 @@
     <div data-alert class="alert alert-success js-alert-box-success">
         <a href="#" class="close js-alert-box-close" data-dismiss="alert">&times;</a>
         <p class="text-large text-bold">Well done!</p>
-        <ul class="alert-list">
+        <p>
             <?php echo $this->session->flashdata('success');?>
-        </ul>
+        </p>
     </div>
 <?php endif;?>
 
@@ -21,9 +21,9 @@
     <div data-alert class="alert alert-info radius">
         <a href="#" class="close js-alert-box-close" data-dismiss="alert">&times;</a>
         <p class="text-large text-bold">Heads up!</p>
-        <ul class="alert-list">
+        <p>
             <?php echo $this->session->flashdata('info');?>
-        </ul>
+        </p>
     </div>
 <?php endif;?>
 
@@ -42,12 +42,23 @@
         <?php endif ?>
     </div>
 <?php endif;?>
+
 <?php if(function_exists('display_errors') &&  display_errors() != ''): ?>
     <div data-alert class="alert alert-danger alert radius">
         <a href="#" class="close js-alert-box-close" data-dismiss="alert" aria-hidden="true">&times;</a>
         <p class="text-large text-bold">Oh snap! You got an error(s)!</p>
         <ul class="alert-list">
             <?php echo display_errors();?>
+        </ul>
+    </div>
+<?php endif;?>
+
+<?php if(isset($errors) &&  $errors != ''): ?>
+    <div data-alert class="alert alert-danger alert radius">
+        <a href="#" class="close js-alert-box-close" data-dismiss="alert" aria-hidden="true">&times;</a>
+        <p class="text-large text-bold">Oh snap! You got an error(s)!</p>
+        <ul class="alert-list">
+            <?php echo $errors;?>
         </ul>
     </div>
 <?php endif;?>

@@ -1,112 +1,56 @@
-<!-- Small boxes (Stat box) -->
-<div class="row">
-  <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-aqua">
-          <div class="inner">
-              <h3>
-                  150
-              </h3>
-              <p>
-                  New Orders
-              </p>
-          </div>
-          <div class="icon">
-              <i class="ion ion-bag"></i>
-          </div>
-          <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-          </a>
-      </div>
-  </div><!-- ./col -->
-  <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-green">
-          <div class="inner">
-              <h3>
-                  53<sup style="font-size: 20px">%</sup>
-              </h3>
-              <p>
-                  Bounce Rate
-              </p>
-          </div>
-          <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-          </div>
-          <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-          </a>
-      </div>
-  </div><!-- ./col -->
-  <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-yellow">
-          <div class="inner">
-              <h3>
-                  44
-              </h3>
-              <p>
-                  User Registrations
-              </p>
-          </div>
-          <div class="icon">
-              <i class="ion ion-person-add"></i>
-          </div>
-          <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-          </a>
-      </div>
-  </div><!-- ./col -->
-  <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-red">
-          <div class="inner">
-              <h3>
-                  65
-              </h3>
-              <p>
-                  Unique Visitors
-              </p>
-          </div>
-          <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-          </div>
-          <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-          </a>
-      </div>
-  </div><!-- ./col -->
-</div><!-- /.row -->
+<!--
+<?php //foreach ($ as $): ?>
 
-<!-- top row -->
-<div class="row">
-  <div class="col-xs-12 connectedSortable">
-
-  </div><!-- /.col -->
-</div>
-<!-- /.row -->
+<?php //endforeach ?>
+-->
 
 <!-- Main row -->
 <div class="row">
   <!-- Left col -->
   <section class="col-lg-6 connectedSortable">
     <!-- Box -->
-    <div class="box box-danger ajax-refresh-box">
+    <div class="box box-danger">
       <div class="box-header">
         <!-- tools box -->
         <div class="pull-right box-tools">
-          <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
         </div><!-- /. tools -->
-        <i class="fa fa-cloud"></i>
+        <i class="fa fa-code"></i>
 
-        <h3 class="box-title">Server Load</h3>
+        <h3 class="box-title">Recent Posts</h3>
       </div><!-- /.box-header -->
       <div class="box-body no-padding">
         <div class="row">
           <div class="col-sm-12">
-              <!-- bar chart -->
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Publish date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if (isset($posts) && count($posts) > 0): ?>
+                  <?php foreach ($posts as $post): ?>
+                    <tr>
+                      <td><?php echo word_limiter($post->title, 7); ?></td>
+                      <td><?php echo date('d M Y', strtotime($post->pubdate)); ?></td>
+                      <th class="text-right"><?php echo button_edit(base_url('admin/post/form/'.$post->id_post)); ?></th>
+                    </tr>
+                  <?php endforeach ?>
+                <?php else: ?>
+                  <tr>
+                    <td colspan="3">We could not find any posts</td>
+                  </tr>
+                <?php endif ?>
+                </tbody>
+              </table>
+            </div>
+
           </div>
         </div><!-- /.row - inside box -->
       </div><!-- /.box-body -->
@@ -119,22 +63,48 @@
     </div><!-- /.box -->
 
     <!-- Box -->
-    <div class="box box-default">
+    <div class="box box-primary">
       <div class="box-header">
         <!-- tools box -->
         <div class="pull-right box-tools">
-          <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
         </div><!-- /. tools -->
-        <i class="fa fa-cloud"></i>
+        <i class="fa fa-bar-chart-o"></i>
 
-        <h3 class="box-title">Server Load</h3>
+        <h3 class="box-title">Recent Banner</h3>
       </div><!-- /.box-header -->
       <div class="box-body no-padding">
         <div class="row">
           <div class="col-sm-12">
-              <!-- bar chart -->
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Enable date</th>
+                    <th>Disable date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if (isset($banners) && count($banners) > 0): ?>
+                  <?php foreach ($banners as $banner): ?>
+                    <tr>
+                      <td><?php echo word_limiter($banner->title, 7); ?></td>
+                      <td><?php echo date('d M Y', strtotime($banner->enable_on)); ?></td>
+                      <td><?php echo date('d M Y', strtotime($banner->disable_on)); ?></td>
+                      <th class="text-right"><?php echo button_edit(base_url('admin/banner/form/'.$banner->id_banner)); ?></th>
+                    </tr>
+                  <?php endforeach ?>
+                <?php else: ?>
+                  <tr>
+                    <td colspan="4">We could not find any banners</td>
+                  </tr>
+                <?php endif ?>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div><!-- /.row - inside box -->
       </div><!-- /.box-body -->
@@ -147,25 +117,53 @@
     </div><!-- /.box -->
 
   </section><!-- /.Left col -->
+
   <!-- right col (We are only adding the ID to make the widgets sortable)-->
   <section class="col-lg-6 connectedSortable">
+
     <!-- Box -->
-    <div class="box box-primary">
+    <div class="box box-default">
       <div class="box-header">
         <!-- tools box -->
         <div class="pull-right box-tools">
-          <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
         </div><!-- /. tools -->
-        <i class="fa fa-cloud"></i>
+        <i class="fa fa-laptop"></i>
 
-        <h3 class="box-title">Server Load</h3>
+        <h3 class="box-title">Recent Products</h3>
       </div><!-- /.box-header -->
       <div class="box-body no-padding">
         <div class="row">
           <div class="col-sm-12">
-              <!-- bar chart -->
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if (isset($products) && count($products) > 0): ?>
+                  <?php foreach ($products as $product): ?>
+                    <tr>
+                      <td><?php echo word_limiter($product->name, 7); ?></td>
+                      <td><?php echo 'Rp. ' . number_format( $product->price, 0 , '' , '.' ) . ',-'; ?></td>
+                      <th class="text-right"><?php echo button_edit(base_url('admin/product/form/'.$product->id_product)); ?></th>
+                    </tr>
+                  <?php endforeach ?>
+                <?php else: ?>
+                  <tr>
+                    <td colspan="3">We could not find any product</td>
+                  </tr>
+                <?php endif ?>
+                </tbody>
+              </table>
+            </div>
+
           </div>
         </div><!-- /.row - inside box -->
       </div><!-- /.box-body -->
@@ -182,7 +180,6 @@
       <div class="box-header">
         <!-- tools box -->
         <div class="pull-right box-tools">
-          <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
         </div><!-- /. tools -->
@@ -193,7 +190,9 @@
       <div class="box-body no-padding">
         <div class="row">
           <div class="col-sm-12">
-              <!-- bar chart -->
+              <?php //if (isset($) && count($) > 0): ?>
+
+              <?php //endif ?>
           </div>
         </div><!-- /.row - inside box -->
       </div><!-- /.box-body -->
@@ -210,7 +209,6 @@
       <div class="box-header">
         <!-- tools box -->
         <div class="pull-right box-tools">
-          <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
           <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
         </div><!-- /. tools -->
@@ -221,7 +219,9 @@
       <div class="box-body no-padding">
         <div class="row">
           <div class="col-sm-12">
-              <!-- bar chart -->
+              <?php //if (isset($) && count($) > 0): ?>
+
+              <?php //endif ?>
           </div>
         </div><!-- /.row - inside box -->
       </div><!-- /.box-body -->
@@ -235,3 +235,121 @@
 
   </section><!-- right col -->
 </div><!-- /.row (main row) -->
+
+<!-- bottom row -->
+<div class="row">
+  <div class="col-xs-12">
+
+    <!-- Box -->
+    <div class="box box-warning">
+      <div class="box-header no-move">
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+          <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+          <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+        </div><!-- /. tools -->
+        <i class="fa fa-picture-o"></i>
+
+        <h3 class="box-title">Recent Gallery</h3>
+      </div><!-- /.box-header -->
+      <div class="box-body no-padding">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4 gallery-grid cs-style">
+            <?php if (count($images) > 0): ?>
+
+              <?php foreach ($images as $img): ?>
+              <li>
+                <figure>
+                  <img src="<?php echo base_url('media/gallery/thumb/'.$img->filename); ?>">
+                  <figcaption>
+                    <h3 class="alt"><?php echo word_limiter($img->caption, 4); ?></h3>
+                    <a class="label label-info pull-right" href="<?php echo base_url('admin/gallery/form/'.$img->id_img); ?>">Edit detail</a>
+                  </figcaption>
+                </figure>
+              </li>
+              <?php endforeach ?>
+            <?php else: ?>
+              <li>Sorry, we could not found any images</li>
+            <?php endif ?>
+            </ul>
+          </div>
+        </div><!-- /.row - inside box -->
+      </div><!-- /.box-body -->
+      <div class="box-footer">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+          </div><!-- ./col -->
+        </div><!-- /.row -->
+      </div><!-- /.box-footer -->
+    </div><!-- /.box -->
+
+  </div><!-- /.col -->
+</div>
+<!-- /.row -->
+
+<?php if(isset($users) && count($users) > 0): ?>
+<div class="row">
+  <div class="col-xs-12">
+
+    <!-- Box -->
+    <div class="box box-warning">
+      <div class="box-header no-move">
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+          <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+          <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+        </div><!-- /. tools -->
+        <i class="fa fa-users"></i>
+
+        <h3 class="box-title">Recent Users</h3>
+      </div><!-- /.box-header -->
+      <div class="box-body no-padding">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if (isset($users) && count($users) > 0): ?>
+                  <?php foreach ($users as $user): ?>
+                    <tr>
+                      <td><?php echo $user->first_name; ?></td>
+                      <td><?php echo $user->last_name; ?></td>
+                      <td><?php echo $user->email; ?></td>
+                      <td><?php echo ($user->active) ? anchor("admin/user/deactivate/".$user->id, lang('index_active_link')) : anchor("admin/user/activate/". $user->id, lang('index_inactive_link'));?></td>
+                      <td class="text-right"><?php echo button_edit(base_url('admin/user/form/'.$user->id)); ?></td>
+                    </tr>
+                  <?php endforeach ?>
+                <?php else: ?>
+                  <tr>
+                    <td colspan="5">We could not find any user</td>
+                  </tr>
+                <?php endif ?>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div><!-- /.row - inside box -->
+      </div><!-- /.box-body -->
+      <div class="box-footer">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+          </div><!-- ./col -->
+        </div><!-- /.row -->
+      </div><!-- /.box-footer -->
+    </div><!-- /.box -->
+
+  </div>
+</div>
+<?php endif; ?>

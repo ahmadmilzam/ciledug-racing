@@ -10,13 +10,29 @@ class Admin extends Admin_Controller {
 
     /**
       * Admin Dashboard
-        TODO:
-        - check if user already logged in
-        - if not logged in, return to login page
-        - collect and fetch important data for dashboard
     **/
     public function index()
     {
+      // load model
+      $this->load->model('post/post_model', 'post');
+      $this->load->model('product/product_model', 'product');
+      $this->load->model('banner/banner_model', 'banner');
+      $this->load->model('gallery/gallery_model', 'gallery');
+      // $this->load->model('video/video_model', 'video');
+
+      //get recent data
+      $data['posts']    = $this->post->select('id_post, title, pubdate')->limit(10)->order_by('id_post', 'DESC')->get_all();
+      $data['products'] = $this->product->select('id_product, name, price')->limit(10)->order_by('id_product', 'DESC')->get_all();
+      $data['banners']  = $this->banner->select('id_banner, title, enable_on, disable_on')->limit(5)->order_by('id_banner', 'DESC')->get_all();
+      $data['images']   = $this->gallery->select('id_img, filename, caption')->limit(8)->order_by('id_img', 'DESC')->get_all();
+
+      if($this->ion_auth->is_admin())
+      {
+        $this->load->model('user/user_model', 'user');
+        $data['users']   = $this->user->select('id, first_name, last_name, email, active')->limit(5)->order_by('id', 'DESC')->get_all();
+      }
+
+
       /**
        * define partials css and js only for Dashboard page
        * 1. local js

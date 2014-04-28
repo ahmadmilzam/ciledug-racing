@@ -5,7 +5,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
           <div class="pull-left image">
-              <img src="<?php echo base_url('media/avatars/default.png') ?>" class="img-circle" alt="User Image" />
+              <img src="<?php echo base_url('media/avatar/default.png') ?>" class="img-circle" alt="User Image" />
           </div>
           <div class="pull-left info">
               <p>Hello, <?php echo userdata('username') ?></p>
@@ -37,6 +37,9 @@
             </li>
           </ul>
         </li>
+
+        <!-- if user is admin, show product link -->
+        <?php if ($this->ion_auth->is_admin()): ?>
         <li class="treeview <?php echo ($this->uri->segment(2) == 'product' OR ($this->uri->segment(2) == 'category' && $this->uri->segment(4) == 'product') ) ? 'active' : ''; ?>"><!-- products link -->
           <a href="#">
             <i class="fa fa-laptop"></i>
@@ -55,6 +58,9 @@
             </li>
           </ul>
         </li>
+        <!-- if user is admin, show product link -->
+        <?php endif ?>
+
         <li class="treeview <?php echo ($this->uri->segment(2) == 'banner')  ? 'active' : ''; ?>"><!-- banners link -->
           <a href="#">
             <i class="fa fa-bar-chart-o"></i>
@@ -70,17 +76,33 @@
             </li>
           </ul>
         </li>
-        <li class="treeview <?php echo $this->uri->segment(2) == 'media' ? 'active' : ''; ?>"><!-- media library link -->
+
+        <li class="treeview <?php echo $this->uri->segment(2) == 'gallery' ? 'active' : ''; ?>"><!-- media library link -->
           <a href="#">
             <i class="fa fa-picture-o"></i>
-            <span>Media</span>
+            <span>Image Gallery</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Add New</a></li>
+            <li class="<?php echo ($this->uri->segment(2) == 'gallery') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/gallery/index'); ?>"><i class="fa fa-angle-double-right"></i> All Gallery</a></li>
+            <li class="<?php echo ($this->uri->segment(2) == 'banner' && $this->uri->segment(3) == 'dropzone') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/gallery/dropzone'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a></li>
           </ul>
         </li>
+
+        <li class="treeview <?php echo $this->uri->segment(2) == 'video' ? 'active' : ''; ?>"><!-- media library link -->
+          <a href="#">
+            <i class="fa fa-video-camera"></i>
+            <span>Videos</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li class="<?php echo ($this->uri->segment(2) == 'video') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/video/index'); ?>"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
+            <li class="<?php echo ($this->uri->segment(2) == 'video' && $this->uri->segment(3) == 'form') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/video/form'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a></li>
+          </ul>
+        </li>
+
+        <!-- if user is admin, show users link -->
+        <?php if ($this->ion_auth->is_admin()): ?>
         <li class="treeview <?php echo ($this->uri->segment(2) == 'user' OR $this->uri->segment(3) == 'create_user' OR $this->uri->segment(3) == 'create_group' ) ? 'active' : ''; ?>"><!-- users link -->
           <a href="#">
             <i class="fa fa-users"></i>
@@ -99,6 +121,8 @@
             </li> -->
           </ul>
         </li>
+        <?php endif; ?>
+        <!-- if user is admin, show users link -->
 
       </ul>
   </section>

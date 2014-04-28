@@ -1,11 +1,10 @@
 <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12 ">
-        <div class="btn-group">
+        <div class="btn-group margin-bottom">
             <!-- Button Color Classes: [secondary alert success] -->
-            <?php echo anchor('admin/banner/form/', 'Create New Banner <i class="fa fa-plus-circle"></i>', array('class'=>'btn btn-default small'))?>
+            <?php echo anchor('admin/banner/form/', 'Create New Banner <i class="fa fa-plus-circle"></i>', array('class'=>'btn btn-default btn-lg'))?>
         </div>
-        <br>
-        <br>
+
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
@@ -40,3 +39,8 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12 ">
+        <?php echo $pagination; ?>
+    </div>
+</div>

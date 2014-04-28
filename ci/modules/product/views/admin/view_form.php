@@ -8,7 +8,7 @@
     </ul>
 
     <!-- Tab panes -->
-    <?php echo form_open('admin/product/form'.$id_product); ?><!-- form open -->
+    <?php echo form_open('admin/product/form'.$id_product, array('id'=>'product-form')); ?><!-- form open -->
     <div class="tab-content"><!-- tab content -->
 
       <div class="tab-pane active" id="detail-tab"><!-- product detail tab -->
@@ -17,30 +17,30 @@
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
               <div class="form-group">
                 <?php echo form_label('Product name'); ?>
-                <?php echo form_input($input_name); ?>
+                <?php echo form_input($input_name, set_value('name', $name)); ?>
               </div>
               <div class="form-group">
                 <?php echo form_label('Product excerpt'); ?>
-                <?php echo form_textarea($input_excerpt); ?>
+                <?php echo form_textarea($input_excerpt, set_value('excerpt', $excerpt)); ?>
               </div>
               <div class="form-group">
                 <?php echo form_label('Product description'); ?>
-                <?php echo form_textarea($input_description); ?>
+                <?php echo form_textarea($input_description, set_value('description', $description)); ?>
               </div>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="form-group">
               <?php echo form_label('Product slug'); ?>
-              <?php echo form_input($input_slug); ?>
+              <?php echo form_input($input_slug, set_value('slug', $slug)); ?>
             </div>
 
             <div class="form-group">
               <?php echo form_label('Product price'); ?>
-              <?php echo form_input($input_slug); ?>
+              <?php echo form_input($input_price, set_value('price', $price)); ?>
             </div>
             <div class="form-group">
               <?php echo form_label('Product category'); ?>
-              <?php echo form_dropdown('category_id', $input_dropdown_categories, $id_category, 'class="form-control"');?>
+              <?php echo form_dropdown('category_id', $input_dropdown_categories, $id_category, 'class="form-control" required="required"');?>
             </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
@@ -66,7 +66,7 @@
 
             <?php foreach($images as $img_id => $img_obj): ?><!-- foreach loop -->
 
-              <?php if (!empty($img_obj)): ?><!-- if condition 2 -->
+              <?php if (!empty($img_obj)): $img = (array)$img_obj;?><!-- if condition 2 -->
 
                 <div class="row product-img-row" id="img_<?php echo $img_id;?>" ><!-- per product -->
 
@@ -92,7 +92,7 @@
                     <label class="radio-inline">
                       <input type="radio" id="primary_image_<?php echo $img_id;?>" name="primary" value="<?php echo $img_id;?>" <?php if(isset($img['primary'])) echo 'checked="checked"';?>> Main Image
                     </label>
-                    <a href="javascript:;" class="btn btn-danger js-delete-img margin-left" data-id="<?php echo $img_id;?>"><i class="fa fa-trash-o"></i> Delete</a>
+                    <a href="<?php echo base_url('admin/media/unlink/product'); ?>" class="btn btn-danger js-delete-img margin-left" data-filename="<?php echo $img['filename']; ?>" data-id="<?php echo $img_id;?>"><i class="fa fa-trash-o"></i> Delete</a>
                   </div>
 
                 </div><!-- per product -->

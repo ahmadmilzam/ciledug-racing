@@ -2099,6 +2099,9 @@ Component: timeline
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.pagination >li .fa{
+  line-height: 20px;
+}
 /*
     Component: Mailbox
 */
@@ -2788,6 +2791,9 @@ Component: timeline
 .box-header{
   cursor: move;
 }
+.box-header.no-move{
+  cursor: default;
+}
 
 /*
  * Custom overide nav tabs margin bottom
@@ -3152,3 +3158,121 @@ Custom simple hierarchy tree
     .large-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
 
+
+
+/*==========  Gallery block  ==========*/
+
+.gallery-grid figure {
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+
+.gallery-grid figure img {
+  display: block;
+  position: relative;
+
+  -webkit-transition: -webkit-transform 0.4s;
+     -moz-transition: -moz-transform 0.4s;
+          transition: transform 0.4s;
+}
+
+.gallery-grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #333;
+  color: #FF6C60;
+  font-size: 13px;
+}
+.gallery-grid figcaption .label {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.gallery-grid figcaption .label:hover {
+  color: #fff;
+}
+
+.gallery-grid figcaption .alt {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+/* Caption Style 3 */
+.cs-style figure {
+  overflow: hidden;
+}
+
+.cs-style figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.cs-style figure:hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.cs-style figcaption {
+  height: 70px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.cs-style figure:hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+
+/*==========  Flex video  ==========*/
+.flex-video {
+  position: relative;
+  padding-top: 1.5625rem;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.flex-video.widescreen {
+  padding-bottom: 56.34%;
+}
+.flex-video.vimeo {
+  padding-top: 0;
+}
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

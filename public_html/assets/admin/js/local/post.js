@@ -2,7 +2,7 @@ $('.file-input').bootstrapFileInput();
 
 CKEDITOR.replace('ckeditor', {
         "extraPlugins" : "imagebrowser",
-        "imageBrowser_listUrl" : base_url+"media/get_files/ckeditor",
+        "imageBrowser_listUrl" : base_url+"admin/media/get_files",
         'filebrowserImageUploadUrl' : base_url+'editor/upload/',
     });
 

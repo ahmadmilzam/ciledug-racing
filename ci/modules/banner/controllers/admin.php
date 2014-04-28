@@ -24,13 +24,37 @@ class Admin extends Admin_Controller {
 
   function __construct()
   {
-      parent::__construct();
-      $this->load->model('banner/banner_model', 'banner');
+    parent::__construct();
+    $this->load->model('banner/banner_model', 'banner');
   }
 
   function index()
   {
-    $data['banners'] = $this->banner->get_all();
+    $count = $this->banner->count_all();
+    $limit = $this->config->item('record_per_page');
+    $page = (int) $this->uri->segment(5);
+    $page == 0 ? $page = 1 : $page = $page;
+
+    if ($count > $limit )
+    {
+      $this->load->library('pagination');
+      $config['base_url'] = base_url('admin/banner/index/page/');
+      $config['total_rows'] = $count;
+      $config['per_page'] = $limit;
+      $config['uri_segment'] = 5;
+      $config['num_links'] = 5;
+      $this->pagination->initialize($config);
+
+      $data['pagination'] =  $this->pagination->create_links();
+      $offset = ($page - 1)  * $limit;
+    }
+    else
+    {
+      $data['pagination'] = '';
+      $offset = 0;
+    }
+
+    $data['banners'] = $this->banner->limit($limit, $offset)->get_all();
     //append breadcrumb link
     $this->breadcrumb->append('Banners', 'admin/banner');
 
@@ -104,82 +128,6 @@ class Admin extends Admin_Controller {
       $data['filename']    = $banner->filename;
     }
 
-    if($this->input->post('submit'))
-    {
-      $this->form_validation->set_rules($this->validate);
-
-      $uploaded = FALSE;
-      // echo 'submit !'; exit;
-      $config['upload_path']      = FCPATH.'media/banner/';
-      $config['allowed_types']    = 'jpg|png';
-      $config['max_size']         = '2048';
-      $config['max_width']        = '1024';
-      $config['encrypt_name']     = true;
-      $config['remove_spaces']    = true;
-      $this->load->library('upload', $config);
-
-      if($this->form_validation->run())
-      {
-        $uploaded   = $this->upload->do_upload('file');
-      }
-
-      $save = array(
-        'title'      => $this->input->post('title'),
-        'caption'    => $this->input->post('caption'),
-        'enable_on'  => $this->input->post('enable_on'),
-        'disable_on' => $this->input->post('disable_on'),
-        'link'       => $this->input->post('link')
-      );
-
-      // if(!$uploaded)
-      // {
-      //   $this->session->set_flashdata('error', $this->upload->display_errors());
-      //   redirect('admin/banner/form/'.$id);
-        // dump('tidak ada upload'); exit;
-      // }
-      if ($this->form_validation->run() && $uploaded)
-      {
-        $image             = $this->upload->data();
-        $save['filename']  = $image['file_name'];
-      }
-      else
-      {
-        $this->session->set_flashdata('error', $this->upload->display_errors());
-        redirect('admin/banner/form/'.$id);
-        dump('tidak ada upload'); exit;
-      }
-
-      if($id)
-      {
-        if($uploaded)
-        {
-          if($data['filename'] != '')
-          {
-            $file = './media/banner/'.$data['filename'];
-            //delete the existing file if needed
-            if(file_exists($file))
-            {
-              unlink($file);
-            }
-          }
-        }
-      }
-
-      if($id)
-      {
-        $banner_id = $this->banner->update($id, $save);
-      }
-      else
-      {
-        $banner_id = $this->banner->insert($save);
-      }
-      if($banner_id)
-      {
-        $this->session->set_flashdata('success', 'Banner has been saved successfully');
-        redirect('admin/banner');
-      }
-    }
-
     /**
      * define input field for login form
      * 1. banner title (text)
@@ -196,7 +144,6 @@ class Admin extends Admin_Controller {
       'name'        => 'title',
       'type'        => 'text',
       'placeholder' => 'Enter banner title',
-      'value'       => $this->form_validation->set_value('title', $data['title']),
       'required'    => 'required'
     );
     //[2]
@@ -204,7 +151,6 @@ class Admin extends Admin_Controller {
       'class'       => 'form-control',
       'name'        => 'caption',
       'placeholder' => 'Enter banner caption',
-      'value'       => $this->form_validation->set_value('caption', $data['caption']),
       'rows'        => '3',
       'required'    => 'required'
     );
@@ -214,7 +160,6 @@ class Admin extends Admin_Controller {
       'class'       => 'form-control',
       'name'        => 'link',
       'placeholder' => 'Enter banner link',
-      'value'       => $this->form_validation->set_value('link', $data['link']),
     );
     //[4]
     $data['input_enable'] = array(
@@ -222,7 +167,6 @@ class Admin extends Admin_Controller {
       'class'       => 'form-control',
       'id'          => 'date1',
       'placeholder' => 'Enter Enable Date',
-      'value'       => $this->form_validation->set_value('enable_on', $data['enable_on']),
       'required'    => 'required'
     );
     //[5]
@@ -231,7 +175,6 @@ class Admin extends Admin_Controller {
       'class'       => 'form-control',
       'id'          => 'date2',
       'placeholder' => 'Enter Disable Date',
-      'value'       => $this->form_validation->set_value('disable_on', $data['disable_on']),
       'required'    => 'required'
     );
 
@@ -255,28 +198,95 @@ class Admin extends Admin_Controller {
     );
 
 
-    if($this->form_validation->run() === FALSE)
+    $this->form_validation->set_rules($this->validate);
+
+    if (!$this->form_validation->run())
     {
       //render view
       $this->template
            ->title($this->config->item('site_name'), $data['page_name'])
            ->build('admin/view_form', $data);
     }
+    else
+    {
+      $uploaded = FALSE;
+
+      $config['upload_path']      = FCPATH.'media/banner/';
+      $config['allowed_types']    = 'jpeg|jpg|png';
+      $config['max_size']         = '2048';
+      $config['max_width']        = '1024';
+      $config['encrypt_name']     = true;
+      $config['remove_spaces']    = true;
+      $this->load->library('upload', $config);
+
+      $uploaded   = $this->upload->do_upload('file');
+
+      $save = array(
+        'title'      => $this->input->post('title'),
+        'caption'    => $this->input->post('caption'),
+        'enable_on'  => $this->input->post('enable_on'),
+        'disable_on' => $this->input->post('disable_on'),
+        'link'       => $this->input->post('link')
+      );
+
+      if($uploaded)
+      {
+        $image             = $this->upload->data();
+        $save['filename']  = $image['file_name'];
+      }
+      else
+      {
+        $data['errors']  = $this->upload->display_errors();
+        //render view
+        $this->template
+             ->title($this->config->item('site_name'), $data['page_name'])
+             ->build('admin/view_form', $data);
+        return; //end script here if there is an error
+      }
+
+      if($id)
+      {
+        if($uploaded)
+        {
+          if($data['filename'] != '')
+          {
+            $file = './media/banner/'.$data['filename'];
+            //delete the existing file if needed
+            if(file_exists($file))
+            {
+              unlink($file);
+            }
+          }
+        }
+        $banner_id = $this->banner->update($id, $save);
+      }
+      else
+      {
+        $banner_id = $this->banner->insert($save);
+      }
+      if($banner_id)
+      {
+        $this->session->set_flashdata('success', 'Banner has been saved successfully');
+        redirect('admin/banner');
+      }
+
+    }
+
   }
 
   function delete($id)
   {
     if($this->banner->delete_banner($id))
     {
-        $this->session->set_flashdata('success', 'Banner has been deleted.');
-        // Redirect to your logged in landing page here
-        redirect('admin/banner', 'refresh');
+      $this->session->set_flashdata('success', 'Banner has been deleted.');
+      // Redirect to your logged in landing page here
+      redirect('admin/banner', 'refresh');
     }
     else
     {
-        $this->session->set_flashdata('error', 'An error occured.');
-        // Redirect to your logged in landing page here
-        redirect('admin/banner', 'refresh');
+      $this->session->set_flashdata('error', 'An error occured.');
+      // Redirect to your logged in landing page here
+      redirect('admin/banner', 'refresh');
     }
   }
 

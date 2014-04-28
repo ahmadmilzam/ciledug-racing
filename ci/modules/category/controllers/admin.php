@@ -22,7 +22,8 @@ class Admin extends Admin_Controller {
     $data['page_name'] = ucfirst($type) . ' Category List';
     $data['categories'] = $this->$type->get_parent_child_tree();
     //append breadcrumb link
-    $this->breadcrumb->append('Categories', 'admin/category/index');
+    $this->breadcrumb->append(ucfirst($type), 'admin/'.$type.'/index');
+    $this->breadcrumb->append('Categories', 'admin/category/index/'.$type);
 
     //render view
     $this->template

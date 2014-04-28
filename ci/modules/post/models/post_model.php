@@ -17,7 +17,9 @@ class Post_model extends MY_Model {
     $this->before_create = array( 'created_at' );
     $this->before_update = array( 'updated_at' );
 
+    //skip validation
     $this->skip_validation = TRUE;
+
     /**
      * Model Validation List
      * Set no validation for this 3 fields
@@ -68,8 +70,8 @@ class Post_model extends MY_Model {
     if($image)
     {
       // dump_exit($image);
-      $file_ori = './media/post/'.$image->filename;
-      $file_thumb = './media/post/thumb/'.$image->filename;
+      $file_ori = './media/post/'.$image->thumbnail;
+      $file_thumb = './media/post/thumb/'.$image->thumbnail;
       //delete the existing file if needed
       if(file_exists($file_ori) && file_exists($file_thumb))
       {

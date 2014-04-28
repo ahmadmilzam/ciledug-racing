@@ -11,35 +11,35 @@
                 Banner Title
                 <small>: Required</small>
               </label>
-              <?php echo form_input($input_title); ?>
+              <?php echo form_input($input_title, set_value('title', $title)); ?>
             </div>
             <div class="form-group">
               <label>
                 Banner Caption
                 <small>: Required</small>
               </label>
-              <?php echo form_textarea($input_caption); ?>
+              <?php echo form_textarea($input_caption, set_value('caption', $caption)); ?>
             </div>
             <div class="form-group">
               <label>
                 Banner Link
                 <small>: Optional</small>
               </label>
-              <?php echo form_input($input_link); ?>
+              <?php echo form_input($input_link, set_value('link', $link)); ?>
             </div>
             <div class="form-group">
               <label>
                 Banner Enable On
                 <small>: Required</small>
               </label>
-              <?php echo form_input($input_enable); ?>
+              <?php echo form_input($input_enable, set_value('title', $enable_on)); ?>
             </div>
             <div class="form-group">
               <label>
                 Banner Disable On
                 <small>: Required</small>
               </label>
-              <?php echo form_input($input_disable); ?>
+              <?php echo form_input($input_disable, set_value('title', $disable_on)); ?>
             </div>
 
             <div class="form-group">
@@ -69,7 +69,7 @@
       <p>
         <strong>Current Banner</strong>
       </p>
-      <img src="<?php echo base_url('media/banner/'.$filename);?>" alt="current" class="img-responsive img-thumbnail"/>
+      <img src="<?php echo base_url('media/banner/'.$filename);?>" alt="current" class="img-responsive img-rounded"/>
     </div>
   </div>
 <?php endif;?>

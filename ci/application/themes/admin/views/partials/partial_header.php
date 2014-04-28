@@ -1,5 +1,5 @@
 <header class="header">
-  <a href="index.html" class="logo">
+  <a href="<?php echo base_url('admin'); ?>" class="logo">
       <!-- Add the class icon to your logo image or logo icon to add the margining -->
       CLD Racing
   </a>
@@ -23,7 +23,7 @@
             <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header bg-light-blue">
-                    <img src="<?php echo base_url('media/avatars/default.png'); ?>" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url('media/avatar/default.png'); ?>" class="img-circle" alt="User Image" />
                     <p>
                         <?php echo userdata('first_name').' '.userdata('last_name'); ?>
                         <small>Member since <?php echo date('M, Y', userdata('created_on')) ?></small>

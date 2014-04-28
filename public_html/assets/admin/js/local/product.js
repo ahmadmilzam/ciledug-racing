@@ -1,6 +1,6 @@
 CKEDITOR.replace('ckeditor', {
         "extraPlugins" : "imagebrowser",
-        "imageBrowser_listUrl" : base_url+"media/get_files/ckeditor",
+        "imageBrowser_listUrl" : base_url+"admin/media/get_files",
         'filebrowserImageUploadUrl' : base_url+'editor/upload/',
     });
 
@@ -16,13 +16,19 @@ jQuery.extend({
     }
 });
 
-$('.file-input').bootstrapFileInput();
 
-var uploading_text = 'Uploading <i class="fa fa-spinner fa-spin"></i>',
-    loading_text   = 'Loading <i class="fa fa-spinner fa-spin"></i>',
-    product_countainer = $('#product-img-list');
+var input_file         = $('#file'),
+    uploading_text     = 'Uploading <i class="fa fa-spinner fa-spin"></i>',
+    deleting_text      = 'Deleting <i class="fa fa-spinner fa-spin"></i>',
+    loading_text       = 'Loading <i class="fa fa-spinner fa-spin"></i>',
+    input_file         = $('.file-input'),
+    upload_btn         = $('#js-upload-button'),
+    product_img_container = $('#product-img-list');
 
-$('#js-upload-button').on("click", function(e){
+
+input_file.bootstrapFileInput();
+
+upload_btn.on("click", function(e){
     e.preventDefault();
 
     var old_text = $(this).html(),
@@ -39,18 +45,21 @@ $('#js-upload-button').on("click", function(e){
             if(data.status == '500')
             {
                 bootbox.alert(data.msg, function() {});
+                upload_btn.html(old_text);
             }
             else
             {
                 bootbox.alert(data.msg, function() {
                     refresh_files(data.file);
                     custom_check_radio();
+                    upload_btn.html(old_text);
                 });
+                input_file.attr('title', '');
             }
-            $('#js-upload-button').html(old_text);
         },
         error : function(xhr, status, error) {
             bootbox.alert(xhr+' status = '+status+' error= '+error, function() {});
+            upload_btn.html(old_text);
         }
     });
 
@@ -60,37 +69,43 @@ $('#js-upload-button').on("click", function(e){
 
 $(document).on('click','.js-delete-img',function(e)
 {
+    e.preventDefault();
+
     var url = $(this).attr('href'),
-        file_name = $(this).data('file'),
+        file_name = $(this).data('filename'),
         div_id = $(this).data('id');
-        old_text = $(this).html();
+
+    $(this).html(deleting_text);
 
     bootbox.confirm("This process cannot be undone. Are you sure ?", function(result){
         // console.log(result);
         if(result === true)
         {
-            $(this)
-            .ajaxStart(function(){
-                $(this).html(loading_text);
-            });
-
-            delete_image(url, file_name).done(function(response){
-                // var
-                $('.photo_'+div_id).fadeOut('fast', function(){
-                    $(this).remove();
-                    if (files.find('.photo-grid').length == 0)
-                    {
-                      bootbox.alert('No image uploaded, please upload some', function() {});
-                    }
-                });
-                $(this).html(old_text);
+            unlink_image(url, file_name).done(function(data)
+            {
+                // alert(data.msg);
+                if(data.status == '500')
+                {
+                    bootbox.alert(data.msg, function() {});
+                }
+                else
+                {
+                    $('#img_'+div_id).fadeOut('fast', function(){
+                        $(this).remove();
+                        if (product_img_container.find('.product-img-row').length == 0)
+                        {
+                          bootbox.alert('We could not find any uploaded image, please upload some', function() {});
+                        }
+                    });
+                }
             })
             .fail(function(xhr, status, err){
-                bootbox.alert(error, function() {});
+                bootbox.alert(err, function() {});
             });
         }
     });
 
+    $(this).html(old_text);
     return false;
 });
 
@@ -135,14 +150,14 @@ function refresh_files(data)
     row_product += '<div class="col-xs-12 text-right">';
 
     row_product += '<label class="radio-inline">';
-    row_product += '<input type="radio" id="primary_image_'+id+'" name="primary" value="<?php echo $img_id;?>"> Main Image';
+    row_product += '<input type="radio" id="primary_image_'+id+'" name="primary" value="'+id+'"> Main Image';
     row_product += '</label>';
-    row_product += '<a href="javascript:;" class="btn btn-danger js-delete-img margin-left" data-id="'+id+'"><i class="fa fa-trash-o"></i> Delete</a>';
+    row_product += '<a href="'+base_url+'admin/media/unlink/product" class="btn btn-danger js-delete-img margin-left" data-filename="'+filename+'" data-id="'+id+'" ><i class="fa fa-trash-o"></i> Delete</a>';
 
     row_product += '</div>';
     row_product += '</div>';
 
-    product_countainer.append(row_product);
+    product_img_container.append(row_product);
 }
 
 
@@ -154,7 +169,7 @@ function refresh_files(data)
  * @param  {[string]} dataType [xml, json, script, or html]
  * @param  {[array]}  data
  */
-function delete_image(url, filename) {
+function unlink_image(url, filename) {
     return $.ajax({
         url: url,
         type: 'POST',
