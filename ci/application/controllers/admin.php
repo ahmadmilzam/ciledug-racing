@@ -18,6 +18,7 @@ class Admin extends Admin_Controller {
       $this->load->model('product/product_model', 'product');
       $this->load->model('banner/banner_model', 'banner');
       $this->load->model('gallery/gallery_model', 'gallery');
+      $this->load->model('video/video_model', 'video');
       // $this->load->model('video/video_model', 'video');
 
       //get recent data
@@ -25,6 +26,7 @@ class Admin extends Admin_Controller {
       $data['products'] = $this->product->select('id_product, name, price')->limit(10)->order_by('id_product', 'DESC')->get_all();
       $data['banners']  = $this->banner->select('id_banner, title, enable_on, disable_on')->limit(5)->order_by('id_banner', 'DESC')->get_all();
       $data['images']   = $this->gallery->select('id_img, filename, caption')->limit(8)->order_by('id_img', 'DESC')->get_all();
+      $data['video'] = $this->video->limit(1)->get_all();
 
       if($this->ion_auth->is_admin())
       {

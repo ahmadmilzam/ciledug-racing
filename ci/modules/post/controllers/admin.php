@@ -163,17 +163,17 @@ class Admin extends Admin_Controller {
 
     $this->form_validation->set_rules($this->validate);
 
-    if (empty($_FILES['file']['name']))
-    {
-      if(empty($data['file']))
-      {
-        $this->form_validation->set_rules(
-          'thumbnail',
-          'Thumbnail',
-          'trim|required|max_length[100]'
-        );
-      }
-    }
+    // if (empty($_FILES['file']['name']))
+    // {
+    //   if(empty($data['file']))
+    //   {
+    //     $this->form_validation->set_rules(
+    //       'thumbnail',
+    //       'Thumbnail',
+    //       'trim|required|max_length[100]'
+    //     );
+    //   }
+    // }
 
     /**
      * define input field for login form
@@ -251,6 +251,7 @@ class Admin extends Admin_Controller {
     }
     else
     {
+      $uploaded = FALSE;
       if ($_FILES['file']['name'])
       {
         $uploaded = $this->upload->do_upload('file');
@@ -273,7 +274,7 @@ class Admin extends Admin_Controller {
 
       if ($this->input->post('slug') == '')
       {
-        $slug = url_slug($this->input->post('name'));
+        $slug = url_slug($this->input->post('title'));
       }
       else
       {
@@ -290,16 +291,20 @@ class Admin extends Admin_Controller {
 
       if ($id)
       {
-        //delete the original file if another is uploaded
-        if($data['thumbnail'] != '')
+        if ($uploaded)
         {
-            $file = './media/post/'.$data['thumbnail'];
+          # code...
+          //delete the original file if another is uploaded
+          if($data['thumbnail'] != '')
+          {
+              $file = './media/post/'.$data['thumbnail'];
 
-            //delete the existing file if needed
-            if(file_exists($file))
-            {
-                unlink($file);
-            }
+              //delete the existing file if needed
+              if(file_exists($file))
+              {
+                  unlink($file);
+              }
+          }
         }
         $this->post->update($id, $save);
       }

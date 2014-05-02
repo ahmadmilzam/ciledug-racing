@@ -84,21 +84,15 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li class="<?php echo ($this->uri->segment(2) == 'gallery') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/gallery/index'); ?>"><i class="fa fa-angle-double-right"></i> All Gallery</a></li>
-            <li class="<?php echo ($this->uri->segment(2) == 'banner' && $this->uri->segment(3) == 'dropzone') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/gallery/dropzone'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a></li>
+            <li class="<?php echo ($this->uri->segment(2) == 'gallery' && ($this->uri->segment(3) == 'index' OR $this->uri->segment(3) == '') )  ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/gallery/index'); ?>"><i class="fa fa-angle-double-right"></i> All Gallery</a></li>
+            <li class="<?php echo ($this->uri->segment(2) == 'gallery' && $this->uri->segment(3) == 'dropzone') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/gallery/dropzone'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a></li>
           </ul>
         </li>
 
-        <li class="treeview <?php echo $this->uri->segment(2) == 'video' ? 'active' : ''; ?>"><!-- media library link -->
-          <a href="#">
-            <i class="fa fa-video-camera"></i>
-            <span>Videos</span>
-            <i class="fa fa-angle-left pull-right"></i>
+        <li class="<?php echo $this->uri->segment(2) == 'video' ? 'active' : ''; ?>"><!-- dashboard link -->
+          <a href="<?php echo base_url('admin/video/form') ?>">
+            <i class="fa fa-dashboard"></i> <span>Video</span>
           </a>
-          <ul class="treeview-menu">
-            <li class="<?php echo ($this->uri->segment(2) == 'video') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/video/index'); ?>"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
-            <li class="<?php echo ($this->uri->segment(2) == 'video' && $this->uri->segment(3) == 'form') ? 'active' : ''; ?>"><a href="<?php echo base_url('admin/video/form'); ?>"><i class="fa fa-angle-double-right"></i> Add New</a></li>
-          </ul>
         </li>
 
         <!-- if user is admin, show users link -->

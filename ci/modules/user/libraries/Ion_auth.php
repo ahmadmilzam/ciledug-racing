@@ -447,7 +447,7 @@ class Ion_auth
 	 **/
 	public function delete_user($id)
 	{
-		 if ($this->ci->ion_auth_model->delete_user($id))
+		 if ($this->ion_auth_model->delete_user($id))
 		 {
 			$this->set_message('delete_successful');
 			return true;

@@ -124,7 +124,7 @@ class Admin extends Admin_Controller {
     $data['msg']    = 'An error occured in deleting file.';
 
     $category = 'images';
-    $filename = $this->input->post('file_name');
+    $filename = $this->input->post('filename');
 
     if ($this->input->post('category') && $this->input->post('category') !== '')
     {

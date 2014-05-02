@@ -51,10 +51,14 @@
 
 
           <section class="content"><!-- Main content -->
+
             <?php echo $this->template->load_view('partials/alert'); ?>
+
             <!-- dynamic content goes here -->
             <?php echo $template['body']; ?>
             <!-- //dynamic content -->
+
+            <?php echo $this->template->load_view('partials/footer'); ?>
 
           </section><!-- /.content -->
 

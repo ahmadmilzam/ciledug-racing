@@ -37,7 +37,6 @@
 
   <div class="modal-footer"><!-- modal footer -->
     <div class="col-md-12">
-      <span class="pull-left"><a href="<?php echo base_url('auth/forgot_password'); ?>">Forgot password?</a></span>
       &copy; 2014&ndash;2015 Copyright - <a href="http://www.cldracing.com" target="_blank">CLD Racing</a>
     </div>
   </div><!-- //modal footer -->

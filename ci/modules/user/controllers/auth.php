@@ -122,7 +122,7 @@ class Auth extends MY_Controller {
   }
 
   //forgot password
-  public function forgot_password()
+  private function forgot_password()
   {
     //redirect them to dashboard if already logged in
     if ($this->ion_auth->logged_in())
@@ -204,7 +204,7 @@ class Auth extends MY_Controller {
   }
 
   //reset password - final step for forgotten password
-  public function reset_password($code = FALSE)
+  private function reset_password($code = FALSE)
   {
     // var_dump($code);exit;
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2014 at 11:42 AM
+-- Generation Time: May 02, 2014 at 05:58 PM
 -- Server version: 5.5.36
 -- PHP Version: 5.4.25
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `banners` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id_banner`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `image_gallery` (
   `alt` varchar(100) DEFAULT NULL,
   `caption` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_img`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `image_gallery`
@@ -80,11 +80,9 @@ CREATE TABLE IF NOT EXISTS `image_gallery` (
 
 INSERT INTO `image_gallery` (`id_img`, `filename`, `alt`, `caption`) VALUES
 (2, '2ee687766f48a20c94b5e7af4950a363.jpg', 'Laptop macbook mantap punya', 'Laptop macbook super duper mantap punya'),
-(3, '24e406b325346d563bf1610e4c881008.jpg', NULL, NULL),
-(4, 'cd73c7eeb094a996653947cbf04da1b0.jpg', NULL, NULL),
-(5, '610d39aaa78f8fa0d292273465b4d5b5.jpg', NULL, NULL),
-(6, '15dcc0d2b10015a789b4d195c2d5f13c.jpg', NULL, NULL),
-(7, 'abf47ff2319129cb4d3b236baadb9a10.PNG', NULL, NULL);
+(11, '01903414a132313f1a73ddac81ee88ec.jpg', NULL, NULL),
+(15, '307851d4d7a3679b2232b3e157c1a56c.PNG', NULL, NULL),
+(16, '4407c08e8926078106b232243c17d09a.PNG', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -131,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
 --
 
 INSERT INTO `posts` (`id_post`, `id_category`, `id_user`, `title`, `slug`, `excerpt`, `description`, `thumbnail`, `pubdate`, `active`, `created_at`, `updated_at`, `view_count`) VALUES
-(4, 4, 1, 'asdasd', '', 'sadasd', '<p>asdsadasd</p>', '3c8c49e94e872199cd085a3a75581b24.PNG', '2014-04-27 00:00:00', 0, '2014-04-27 15:29:08', NULL, 0),
+(4, 4, 1, 'asdasd ajah', 'asdasd-ajah', 'sadasd', '<p>asdsadasd</p>', 'af580675ff0681b6f7563b4a0c77f34e.jpg', '2014-04-27 00:00:00', 0, '2014-04-27 15:29:08', '2014-04-30 23:26:08', 0),
 (5, 4, 1, 'Kekerasan dan perbudakan di indonesia semakin meraja rela', '', 'Kekerasan dan perbudakan di indonesia semakin meraja rela', '<p>Kekerasan dan perbudakan di indonesia semakin meraja rela</p>', '7cd94a3379ca6b7bcdf0b4d90d8d96f1.jpg', '2014-04-27 00:00:00', 0, '2014-04-27 15:32:27', NULL, 0);
 
 -- --------------------------------------------------------
@@ -184,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`id_product`),
   KEY `id_category` (`id_category`,`slug`),
   KEY `id_category_2` (`id_category`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -246,8 +244,8 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 --
 
 INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('7c346248e4b2ea6fbcdcdd14f0059442', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 1398584417, 'a:9:{s:9:"user_data";s:0:"";s:8:"identity";s:14:"admin@cldr.com";s:8:"username";s:13:"administrator";s:10:"first_name";s:5:"Ahmad";s:9:"last_name";s:6:"Milzam";s:5:"email";s:14:"admin@cldr.com";s:7:"user_id";s:1:"1";s:14:"old_last_login";s:10:"1398580793";s:10:"created_on";s:10:"1268889823";}'),
-('e6da7479093976d98cba6410b0b6d702', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36', 1398588120, 'a:9:{s:9:"user_data";s:0:"";s:8:"identity";s:14:"admin@cldr.com";s:8:"username";s:13:"administrator";s:10:"first_name";s:5:"Ahmad";s:9:"last_name";s:6:"Milzam";s:5:"email";s:14:"admin@cldr.com";s:7:"user_id";s:1:"1";s:14:"old_last_login";s:10:"1398584422";s:10:"created_on";s:10:"1268889823";}');
+('176f2cde893242a0d68a177cb4a35339', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36', 1399042574, 'a:10:{s:9:"user_data";s:0:"";s:8:"identity";s:14:"admin@cldr.com";s:8:"username";s:13:"administrator";s:10:"first_name";s:5:"Ahmad";s:9:"last_name";s:6:"Milzam";s:5:"email";s:14:"admin@cldr.com";s:7:"user_id";s:1:"1";s:14:"old_last_login";s:10:"1398956455";s:10:"created_on";s:10:"1268889823";s:17:"flash:old:success";s:23:"Image has been deleted.";}'),
+('88ffc686e16d2cdd1c4058649a7a1d89', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36', 1399042574, 'a:2:{s:9:"user_data";s:0:"";s:14:"flash:new:info";s:54:"<li>You must logged in to enter the control panel</li>";}');
 
 -- --------------------------------------------------------
 
@@ -274,18 +272,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `company` varchar(100) NOT NULL DEFAULT '',
   `phone` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '\0\0', 'administrator', '$2a$08$Ha.NrC/uDQRuh8wQveaQKOnzVZP6.FIBYVS02GCrw3ELVflZ5Gej6', '9462e8eee0', 'admin@cldr.com', '', '', 0, '', 1268889823, 1398588125, 1, 'Ahmad', 'Milzam', 'ADMIN', '0'),
-(2, '\0\0', 'author satu', '$2a$08$.iw3epkqlvmBeLMqwPMFuetG.4DqIxSxQO6036aWzqmGxkLGpo2Cy', '', 'author@ahmadmilzam.com', '', '', 0, '', 1393746454, 1393746454, 1, 'author', 'satu', '', '091234890547'),
-(3, '\0\0', 'asdas asdasd', '$2a$08$/7OxqwraJcjMBZGC.BPNyO3iyq.tADtf3GH5bGNBeglsik82EMFZG', '', 'asdasd@ahmadmilzam.com', '', '', 0, '', 1393746527, 1393746527, 1, 'asdas', 'asdasd', '', '097798799879'),
-(4, '\0\0', 'asasd asdasdasd', '$2a$08$/tuRAJwAcbE3gLtgb2/Gf.w9uaYkYjoryAMTUYtPBJbnDbQ7pzeAC', '', 'abi.rafdi20@gmail.com', '', '', 0, '', 1393756484, 1393756484, 1, 'asasd', 'asdasdasd', '', '908098039248'),
-(5, '\0\0', 'asdsadasd asdasdsad', '$2a$08$u6z4rpAIVzS8a2CsuqIeuufPrrvrV5xoeE1JzlnEsdNLKfgc/IjxK', '', 'sadasdasd@asdasd.com', '', '', 0, '', 1393757069, 1393757069, 1, 'asdsadasd', 'ASDASDSAD', '', '1231231');
+(1, '\0\0', 'administrator', '$2a$08$Ha.NrC/uDQRuh8wQveaQKOnzVZP6.FIBYVS02GCrw3ELVflZ5Gej6', '9462e8eee0', 'admin@cldr.com', '', '', 0, '', 1268889823, 1399042932, 1, 'Ahmad', 'Milzam', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
@@ -309,11 +303,7 @@ CREATE TABLE IF NOT EXISTS `users_groups` (
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (39, 1, 1),
-(40, 1, 3),
-(3, 2, 3),
-(5, 3, 3),
-(7, 4, 3),
-(9, 5, 3);
+(40, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -322,10 +312,11 @@ INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `videos` (
-  `id_video` int(11) NOT NULL,
-  `url` int(11) NOT NULL,
-  `active` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_video` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_video`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
@@ -335,8 +326,8 @@ CREATE TABLE IF NOT EXISTS `videos` (
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-  ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `post_categories` (`id_category`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `post_categories` (`id_category`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `products`

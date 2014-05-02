@@ -27,16 +27,16 @@ date_default_timezone_set('Asia/Jakarta');
 $root = dirname(__FILE__);
 // var_dump($root); exit;
 switch ($root) {
-		//change your project path here
-		// laptop kantor
-    case 'D:\server\htdocs\ciledug-racing\public_html':
-		// PC Rumah
-    // case 'F:\Server\htdocs\ciledug-racing\public_html':
-        $enviroment = 'development';
-    break;
-    default:
-        $enviroment = 'production';
-    break;
+	//change your project path here
+	// laptop kantor
+  case 'D:\server\htdocs\ciledug-racing\public_html':
+	// PC Rumah
+  // case 'F:\Server\htdocs\ciledug-racing\public_html':
+      $enviroment = 'development';
+  break;
+  default:
+      $enviroment = 'production';
+  break;
 }
 define('ENVIRONMENT', $enviroment);
 /*

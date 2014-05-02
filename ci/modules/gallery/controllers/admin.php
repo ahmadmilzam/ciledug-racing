@@ -230,31 +230,6 @@ class Admin extends Admin_Controller {
     }
   }
 
-  public function unlink()
-  {
-    $data['status'] = 500;
-    $data['msg']    = 'An error occured in deleting file.';
-
-    $category = 'gallery';
-    $filename = $this->input->post('file_name');
-
-    $file_large = FCPATH.'/media/gallery/'.$filename;
-    $file_thumb = FCPATH.'/media/gallery/thumb/'.$filename;
-
-    if(file_exists($file_thumb))
-    {
-      unlink($file_large);
-      unlink($file_thumb);
-      $data['status'] = 200;
-      $data['msg']    = 'File has been successfully deleted.';
-    }
-
-    header('Content-type: application/json');
-    echo json_encode($data);
-    exit;
-
-  }
-
   function delete($id)
   {
     if($this->gallery->delete_img($id))

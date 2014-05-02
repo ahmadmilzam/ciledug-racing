@@ -63,7 +63,7 @@
             Current Thumbnail
           </label> <br>
           <div class="text-center">
-            <img src="<?php echo base_url('media/post/'.$thumbnail); ?>" class="img-rounded">
+            <img src="<?php echo base_url('media/post/thumb/'.$thumbnail); ?>" class="img-rounded">
           </div>
         </div>
         <?php endif; ?>

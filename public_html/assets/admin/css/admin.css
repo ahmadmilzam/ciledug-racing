@@ -12,12 +12,14 @@
 */
 html,
 body {
+  position: relative;
   overflow-x: hidden!important;
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
   background: #f9f9f9;
 }
+
 a {
   color: #3c8dbc;
 }
@@ -118,6 +120,9 @@ h6,
   color: #666;
   display: block;
   margin-top: 5px;
+}
+.content-header {
+  border-bottom: 1px solid #eee;
 }
 /* All images should be responsive */
 img {
@@ -3276,3 +3281,22 @@ Custom simple hierarchy tree
   width: 100%;
   height: 100%;
 }
+
+/*==========================================
+=            Sticky footer hack            =
+==========================================*/
+
+.content {
+  margin-bottom: 50px;
+}
+.sticky-footer{
+  background-color: #f9f9f9;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  max-width: 100%;
+  line-height: 50px;
+  color: #555;
+}
+
+/*-----  End of Sticky footer hack  ------*/

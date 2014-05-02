@@ -411,7 +411,7 @@ class Ion_auth_model extends CI_Model
             $identity = $result->{$this->identity_column};
 
             $data = array(
-                'activation_code' => NULL,
+                'activation_code' => '',
                 'active'          => 1
             );
 
@@ -421,7 +421,7 @@ class Ion_auth_model extends CI_Model
         else
         {
             $data = array(
-                'activation_code' => NULL,
+                'activation_code' => '',
                 'active'          => 1
             );
 

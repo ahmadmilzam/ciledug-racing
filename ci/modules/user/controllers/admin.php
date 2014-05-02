@@ -275,7 +275,7 @@ class Admin extends Admin_Controller {
             {
                 // check to see if we are creating the group
                 // redirect them back to the admin page
-                $this->session->set_flashdata('message', $this->ion_auth->messages());
+                $this->session->set_flashdata('success', $this->ion_auth->messages());
                 redirect("auth", 'refresh');
             }
         }
@@ -371,68 +371,54 @@ class Admin extends Admin_Controller {
     }
 
     //activate the user
-    function activate($id, $code=false)
+    function activate($id)
     {
-        if ($code !== false)
-        {
-            $activation = $this->ion_auth->activate($id, $code);
-        }
-        else if ($this->ion_auth->is_admin())
-        {
-            $activation = $this->ion_auth->activate($id);
-        }
-
-        if ($activation)
+        if ($this->ion_auth->activate($id))
         {
             //redirect them to the auth page
-            $this->session->set_flashdata('message', $this->ion_auth->messages());
-            redirect("auth", 'refresh');
+            $this->session->set_flashdata('success', $this->ion_auth->messages());
         }
         else
         {
             //redirect them to the forgot password page
-            $this->session->set_flashdata('message', $this->ion_auth->errors());
-            redirect("auth/forgot_password", 'refresh');
+            $this->session->set_flashdata('error', $this->ion_auth->errors());
         }
+            redirect("admin/user", 'refresh');
     }
 
     //deactivate the user
     function deactivate($id = NULL)
     {
-        $id = $this->config->item('use_mongodb', 'ion_auth') ? (string) $id : (int) $id;
-
-        $this->form_validation->set_rules('confirm', $this->lang->line('deactivate_validation_confirm_label'), 'required');
-        $this->form_validation->set_rules('id', $this->lang->line('deactivate_validation_user_id_label'), 'required|alpha_numeric');
-
-        if ($this->form_validation->run() == FALSE)
+        // do we have the right userlevel?
+        if ($this->ion_auth->deactivate($id))
         {
-            // insert csrf check
-            $data['csrf'] = $this->_get_csrf_nonce();
-            $data['user'] = $this->ion_auth->user($id)->row();
-
-            $this->_render_page('auth/deactivate_user', $data);
+            $this->session->set_flashdata('success', $this->ion_auth->messages());
         }
         else
         {
-            // do we really want to deactivate?
-            if ($this->input->post('confirm') == 'yes')
-            {
-                // do we have a valid request?
-                if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
-                {
-                    show_error($this->lang->line('error_csrf'));
-                }
-
-                // do we have the right userlevel?
-                if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin() && $user->user_id != $this->session->userdata('user_id'))
-                {
-                    $this->ion_auth->deactivate($id);
-                }
-            }
-
-            //redirect them back to the auth page
-            redirect('auth', 'refresh');
+            $this->session->set_flashdata('error', $this->ion_auth->errors());
         }
+        //redirect them back to user list page
+        redirect('admin/user', 'refresh');
+    }
+
+    public function delete_user($id = FALSE)
+    {
+        if(!$id)
+        {
+            $this->session->set_flashdata('error', 'An error occured, user not found');
+            redirect('admin/user', 'refresh');
+        }
+
+        if($this->ion_auth->delete_user($id))
+        {
+            $this->session->set_flashdata('success', 'User has been deleted');
+        }
+        else
+        {
+            $this->session->set_flashdata('error', 'An error occured while deleting an user');
+        }
+        redirect('admin/user', 'refresh');
     }
 
     // protected function check_edit_email($email)

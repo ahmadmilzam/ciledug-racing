@@ -30,16 +30,18 @@
                         <td><?php echo $user['email']; ?></td>
                         <td>
                             <?php foreach ($user['groups'] as $group):?>
-                                <?php echo anchor("user/edit_group/".$group['group_id'], $group['group_name']) ;?><br />
+                                <?php echo $group['group_name'];?><br>
                             <?php endforeach?>
                         </td>
-                        <td><?php echo ($user['active']) ? anchor("admin/user/deactivate/".$user['id'], lang('index_active_link')) : anchor("admin/user/activate/". $user['id'], lang('index_inactive_link'));?></td>
+                        <td>
+                            <?php echo ($user['active']) ? anchor("admin/user/deactivate/".$user['id'], lang('index_active_link')) : anchor("admin/user/activate/". $user['id'], lang('index_inactive_link'));?>
+                        </td>
                         <td><?php echo date('d-M-Y', $user['last_login']); ?></td>
                         <td><?php echo inet_ntop($user['ip_address']); ?></td><!-- inet_pton -->
                         <td>
-                            <?php echo anchor("admin/user/edit_user/".$user['id'], '<i class="fa fa-pencil-square-o left"></i>');?>
+                            <?php echo button_edit(base_url('admin/user/edit_user/'.$user['id'])); ?>
                             <?php if ($user['id'] != $this->session->userdata('user_id') ): ?>
-                                <?php echo anchor("admin/user/delete_user/".$user['id'], '<i class="fa fa-times-circle alert-color right"></i>');?>
+                            <?php echo button_delete(base_url('admin/user/delete_user/'.$user['id'])); ?>
                             <?php endif ?>
                         </td>
                     </tr>
