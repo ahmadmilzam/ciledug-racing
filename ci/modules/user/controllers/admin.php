@@ -85,7 +85,7 @@ class Admin extends Admin_Controller {
             $email    = strtolower($this->input->post('email'));
             $password = $this->input->post('password');
             $groups   = $this->input->post('groups');
-
+            // dump($groups); exit;
             $additional_data = array(
                 'first_name' => $this->input->post('first_name'),
                 'last_name'  => $this->input->post('last_name'),
@@ -97,8 +97,8 @@ class Admin extends Admin_Controller {
         {
             //check to see if we are creating the user
             //redirect them back to the admin page
-            $this->session->set_flashdata('message', $this->ion_auth->messages());
-            redirect("admin/auth", 'refresh');
+            $this->session->set_flashdata('success', $this->ion_auth->messages());
+            redirect("admin/user", 'refresh');
         }
         else
         {
